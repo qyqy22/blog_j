@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jacqueline</title>
+    <link>https://qyqy22.github.io/</link>
+    <atom:link href="//rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>computer I want to be best</description>
+    <pubDate>Fri, 21 Jun 2019 18:18:06 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>addPostgis</title>
+      <link>https://qyqy22.github.io/2019/06/21/addPostgis/</link>
+      <guid>https://qyqy22.github.io/2019/06/21/addPostgis/</guid>
+      <pubDate>Fri, 21 Jun 2019 17:05:45 GMT</pubDate>
+      <description>
+      
+        &lt;h3 id=&quot;create-a-complex-extension&quot;&gt;&lt;a href=&quot;#create-a-complex-extension&quot; class=&quot;headerlink&quot; title=&quot;create a complex extension&quot;&gt;&lt;/a&gt;create a complex extension&lt;/h3&gt;&lt;p&gt;For example : create a postgis&lt;br&gt;if you install postgis at first, there are some information as viewed below:&lt;br&gt;Geos-config not found&lt;br&gt;gdal-config not found&lt;br&gt;Sudo apt install libgdal-dev&lt;br&gt;You should install proj and geos first&lt;/p&gt;
+      
+      </description>
+      
+      <comments>https://qyqy22.github.io/2019/06/21/addPostgis/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>How To Add Extensions To PG on Ubuntu</title>
+      <link>https://qyqy22.github.io/2019/06/20/addExtension/</link>
+      <guid>https://qyqy22.github.io/2019/06/20/addExtension/</guid>
+      <pubDate>Thu, 20 Jun 2019 17:32:00 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;How-Extensibility-Works&quot;&gt;&lt;a href=&quot;#How-Extensibility-Works&quot; class=&quot;headerlink&quot; title=&quot;How Extensibility Works&quot;&gt;&lt;/a&gt;How Extensibility Works&lt;/h2&gt;&lt;p&gt;PostgreSQL is extensible because its operation is catalog-driven.&lt;/p&gt;
+&lt;p&gt;PostgreSQL stores much more information in its catalogs: not only information about tables and columns, but also information about data types, functions, access methods, and so on. These tables can be modified by the user, and since PostgreSQL bases its operation on these tables, this means that PostgreSQL can be extended by users.&lt;/p&gt;
+&lt;p&gt;The PostgreSQL server can moreover incorporate user-written code into itself through dynamic loading.&lt;br&gt;&lt;/p&gt;
+      
+      </description>
+      
+      <comments>https://qyqy22.github.io/2019/06/20/addExtension/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Elephant Shed</title>
+      <link>https://qyqy22.github.io/2019/05/30/elephant-shed/</link>
+      <guid>https://qyqy22.github.io/2019/05/30/elephant-shed/</guid>
+      <pubDate>Thu, 30 May 2019 23:43:08 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;Elephant Shed 是一个基于网页版的postgreSQL前端管理软件。他捆绑了PostgreSQL的各项应用软件和组件。当前他能管理单点Debian/Ubuntu PostgreSQL服务起和应用。&lt;/p&gt;
+      
+      </description>
+      
+      <comments>https://qyqy22.github.io/2019/05/30/elephant-shed/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>installing pgAdmin4 and pg on Ubuntu</title>
+      <link>https://qyqy22.github.io/2019/05/16/installing-pgAdmin4-and-pg/</link>
+      <guid>https://qyqy22.github.io/2019/05/16/installing-pgAdmin4-and-pg/</guid>
+      <pubDate>Thu, 16 May 2019 21:30:05 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;PgAdmin-4-Installation-Steps&quot;&gt;&lt;a href=&quot;#PgAdmin-4-Installation-Steps&quot; class=&quot;headerlink&quot; title=&quot;PgAdmin 4 Installation Steps&quot;&gt;&lt;/a&gt;PgAdmin 4 Installation Steps&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Update the system&lt;br&gt;Before starting the installation process, you have to update the system by executing the following command. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;variable&quot;&gt;$sudo&lt;/span&gt; apt update   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/05/16/installing-pgAdmin4-and-pg/pgadmin.png&quot; alt=&quot;pgadmin&quot;&gt;&lt;/p&gt;
+      
+      </description>
+      
+      <comments>https://qyqy22.github.io/2019/05/16/installing-pgAdmin4-and-pg/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hexo Github</title>
+      <link>https://qyqy22.github.io/2019/05/14/hexo-github/</link>
+      <guid>https://qyqy22.github.io/2019/05/14/hexo-github/</guid>
+      <pubDate>Tue, 14 May 2019 16:58:06 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;What-is-Hexo&quot;&gt;&lt;a href=&quot;#What-is-Hexo&quot; class=&quot;headerlink&quot; title=&quot;What is Hexo?&quot;&gt;&lt;/a&gt;What is Hexo?&lt;/h2&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Step&quot;&gt;&lt;a href=&quot;#Step&quot; class=&quot;headerlink&quot; title=&quot;Step&quot;&gt;&lt;/a&gt;Step&lt;/h2&gt;&lt;p&gt;1.create new Repository in Github&lt;br&gt;2.Install Tools&lt;br&gt;3.Deploy Website&lt;br&gt;4.Use Hexo&lt;br&gt;5.Auto browersersync&lt;br&gt;6.Markdown Article&lt;br&gt;&lt;/p&gt;
+      
+      </description>
+      
+      <comments>https://qyqy22.github.io/2019/05/14/hexo-github/#disqus_thread</comments>
+    </item>
+    
+  </channel>
+</rss>

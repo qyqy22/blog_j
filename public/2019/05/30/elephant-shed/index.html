@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Elephant Shed - Jacqueline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="介绍Elephant Shed 是一个基于网页版的postgreSQL前端管理软件。他捆绑了PostgreSQL的各项应用软件和组件。当前他能管理单点Debian/Ubuntu PostgreSQL服务起和应用。">
+<meta name="keywords" content="elephant">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elephant Shed">
+<meta property="og:url" content="https://qyqy22.github.io/2019/05/30/elephant-shed/index.html">
+<meta property="og:site_name" content="Jacqueline">
+<meta property="og:description" content="介绍Elephant Shed 是一个基于网页版的postgreSQL前端管理软件。他捆绑了PostgreSQL的各项应用软件和组件。当前他能管理单点Debian/Ubuntu PostgreSQL服务起和应用。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://qyqy22.github.io/gallery/Elephant_Shed.png">
+<meta property="og:updated_time" content="2019-06-10T23:15:14.379Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Elephant Shed">
+<meta name="twitter:description" content="介绍Elephant Shed 是一个基于网页版的postgreSQL前端管理软件。他捆绑了PostgreSQL的各项应用软件和组件。当前他能管理单点Debian/Ubuntu PostgreSQL服务起和应用。">
+<meta name="twitter:image" content="https://qyqy22.github.io/gallery/Elephant_Shed.png">
+
+
+
+
+
+<link rel="alternative" href="rss2.xml" title="Elephant Shed" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/gallery/logocat.png" alt="Elephant Shed" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/qyqy22/qyqy22.github.io.git">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Table of Contents" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    an hour read (About 7270 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Elephant Shed
+                <!--add by jac page.author-->
+                <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                    <span class="level-item has-text-grey">
+                        
+                    </span>
+                </div>
+                <!--add by jac end-->
+            
+        </h1>
+        <div class="content">
+            <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Elephant Shed 是一个基于网页版的postgreSQL前端管理软件。他捆绑了PostgreSQL的各项应用软件和组件。当前他能管理单点Debian/Ubuntu PostgreSQL服务起和应用。</p>
+<a id="more"></a>
+<p>主要组件包括如下：</p>
+<ul>
+<li>PostgreSQL - <a href="https://www.postgresql.org/" target="_blank" rel="noopener">https://www.postgresql.org/</a></li>
+<li>pgAdmin4 - <a href="https://www.pgadmin.org/" target="_blank" rel="noopener">https://www.pgadmin.org/</a></li>
+<li>postgresql-common - <a href="https://anonscm.debian.org/cgit/pkg-postgresql/postgresql-common.git" target="_blank" rel="noopener">https://anonscm.debian.org/cgit/pkg-postgresql/postgresql-common.git</a></li>
+<li>pgBadger - <a href="http://dalibo.github.io/pgbadger/" target="_blank" rel="noopener">http://dalibo.github.io/pgbadger/</a></li>
+<li>pgBackRest - <a href="http://www.pgbackrest.org/" target="_blank" rel="noopener">http://www.pgbackrest.org/</a></li>
+<li>Grafana - <a href="https://grafana.com/" target="_blank" rel="noopener">https://grafana.com/</a></li>
+<li>Prometheus - <a href="https://prometheus.io/" target="_blank" rel="noopener">https://prometheus.io/</a></li>
+<li>Cockpit - <a href="http://cockpit-project.org/" target="_blank" rel="noopener">http://cockpit-project.org/</a></li>
+<li>Shell In A Box - <a href="https://github.com/shellinabox/shellinabox" target="_blank" rel="noopener">https://github.com/shellinabox/shellinabox</a>      </li>
+</ul>
+<p>增加的其他工具可以通过配置来设置。<br>捆绑的组件和处理任务的数量会增加当前运行的服务器。因此仅建议用于足够大小的系统。   </p>
+<p>本文档描述了当前版本。<br>本文档的更新版本将随 elephant-shed packages一起提供，可以在中找到<code>/ usr / share / doc / elephant-shed-portal</code>（<code>/ usr / share / doc / elephant-shed *</code>）和网站地址&lt;https：// your-server / doc /&gt;。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Elephant Shed 包括如下安装包和依赖:</p>
+<ul>
+<li><code>elephant-shed</code>:<br>元数据包.</li>
+<li><code>elephant-shed-prometheus</code>:<br>Prometheus和他的输出的配置文件和帮助脚本.</li>
+<li><code>elephant-shed-cockpit</code>:<br>cockpit和cockpit-ws配置文件.</li>
+<li><code>elephant-shed-grafana</code>:<br>预配置的Prometheus数据源和仪表板，包括各种系统和PostgreSQL指标.</li>
+<li><code>elephant-shed-pgadmin4</code>:<br>pgAdmin4的配置文件.</li>
+<li><code>elephant-shed-pgbackrest</code>:<br>系统服务文件和生成器, 帮助脚本和预设配置.</li>
+<li><code>elephant-shed-pgbadger</code>:<br>系统服务文件, 生成器和帮助程序脚本.</li>
+<li><code>elephant-shed-portal</code>:<br>Elephant Shed web的Apache配置.</li>
+<li><code>elephant-shed-postgresql</code>:<br>PostgreSQL的其他预设配置文件.</li>
+<li><code>elephant-shed-shellinabox</code>:<br>Shell的配置文件.</li>
+<li><code>elephant-shed-tmate</code>:<br>更容易支持的预配置tmate的安装包.</li>
+</ul>
+<h2 id="安装包"><a href="#安装包" class="headerlink" title="安装包"></a>安装包</h2><p>重构包可从该网址获得 <a href="https://packages.credativ.com/public/postgresql/" target="_blank" rel="noopener">https://packages.credativ.com/public/postgresql/</a>.</p>
+<p>存储库包括该包 <code>elephant-shed</code>. 该包包括 Grafana, Cockpit and various python 包.</p>
+<h3 id="在Debian和Ubuntu上安装"><a href="#在Debian和Ubuntu上安装" class="headerlink" title="在Debian和Ubuntu上安装"></a>在Debian和Ubuntu上安装</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 安装工具</span><br><span class="line">sudo apt-get install curl ca-certificates apt-transport-https</span><br><span class="line"></span><br><span class="line"># 使用官网 PostgreSQL存储库, apt.postgresql.org</span><br><span class="line">echo &quot;deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main&quot; | sudo tee -a /etc/apt/sources.list.d/pgdg.list</span><br><span class="line">curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -</span><br><span class="line"></span><br><span class="line"># 使用 credativ 存储库, packages.credativ.com</span><br><span class="line">echo &quot;deb https://packages.credativ.com/public/postgresql/ stretch-stable main&quot; | sudo tee -a /etc/apt/sources.list.d/elephant-shed.list</span><br><span class="line">curl https://packages.credativ.com/public/postgresql/aptly.key | sudo apt-key add -</span><br><span class="line"></span><br><span class="line"># 安装 elephant-shed</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install elephant-shed</span><br><span class="line"></span><br><span class="line"># 选择适合的PostgreSQL版本安装</span><br><span class="line">sudo apt-get install postgresql-10</span><br><span class="line"></span><br><span class="line"># 允许群组“elephant-shed”中的每个用户在门户网站上登录</span><br><span class="line"># 加入该群</span><br><span class="line">sudo adduser &lt;USERNAME&gt; elephant-shed</span><br></pre></td></tr></table></figure>
+<h3 id="在RedHat和CentOS系统上安装"><a href="#在RedHat和CentOS系统上安装" class="headerlink" title="在RedHat和CentOS系统上安装"></a>在RedHat和CentOS系统上安装</h3><p>Elephant Shed 可以在PostgreSQL RPM中安装有关的包<br>到<a href="https://yum.postgresql.org/" target="_blank" rel="noopener"><b>yum.postgresql.org</b></a>网站安装适合PostgreSQL版本的安装包.<br>然后再安装Elephant Shed.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># 使用credativ存储库(也将下载EPEL)</span></span><br><span class="line">sudo yum install https://packages.credativ.com/public/postgresql/yum/credativ-repo.rpm</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 在RedHat上, 激活其他存储库 (不是在CentOS上)</span></span><br><span class="line">subscription-manager repos --<span class="hljs-built_in">enable</span>=rhel-7-server-extras-rpms</span><br><span class="line">subscription-manager repos --<span class="hljs-built_in">enable</span>=rhel-7-server-optional-rpms</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 选择需要的 PostgreSQL 版本安装</span></span><br><span class="line">sudo yum install postgresql11-server postgresql11-contrib postgresql-common</span><br><span class="line">sudo pg_createcluster 11 main --start</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 安装 elephant-shed</span></span><br><span class="line">sudo yum install elephant-shed</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 所有在 "elephant-shed"组里的用户都可以登陆网页</span></span><br><span class="line"><span class="hljs-comment"># 把所有需要的用户都加进这个组里</span></span><br><span class="line">sudo vigr</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 不幸的是, pgAdmin4和shellinabox不支持SELinux</span></span><br><span class="line"><span class="hljs-comment"># 如果要使用这些组件，请禁用SELinux</span></span><br><span class="line">sudo setenforce 0</span><br><span class="line">sudo sed -i -e <span class="hljs-string">'s/^SELINUX=.*/SELINUX=permissive/'</span> /etc/selinux/config</span><br></pre></td></tr></table></figure>
+<h2 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h2><p>源码可以在github上获得: <a href="https://github.com/credativ/elephant-shed" target="_blank" rel="noopener">https://github.com/credativ/elephant-shed</a></p>
+<h3 id="源码构建Debian包"><a href="#源码构建Debian包" class="headerlink" title="源码构建Debian包"></a>源码构建Debian包</h3><p>所有 Elephant Shed Debian 包可以用该命令构建 <code>make deb</code>.</p>
+<p>要求:</p>
+<ul>
+<li><code>dpkg-dev</code></li>
+<li><code>devscripts</code></li>
+</ul>
+<h3 id="构建文档"><a href="#构建文档" class="headerlink" title="构建文档"></a>构建文档</h3><p>把文件构建成 HTML 格式类型 <code>make docs</code>.</p>
+<p>要求:</p>
+<ul>
+<li><code>sphinx</code></li>
+</ul>
+<h3 id="创建Vagrant测试"><a href="#创建Vagrant测试" class="headerlink" title="创建Vagrant测试"></a>创建Vagrant测试</h3><p><code>make vagrant</code> 该命令构建所有组件, 用Vagrant创建一个新的虚拟机，用Ansible部署软件.<br>该命令也可以重新部署已经运行的机器.</p>
+<p>Vagrant 配置文件在该目录 <code>vagrant/Vagrantfile</code>.</p>
+<p>要求:</p>
+<ul>
+<li><code>vagrant</code></li>
+<li><code>virtualbox</code> 或者 <code>libvirt</code></li>
+<li><code>ansible</code></li>
+</ul>
+<h3 id="部署到远程服务器"><a href="#部署到远程服务器" class="headerlink" title="部署到远程服务器"></a>部署到远程服务器</h3><p>部署软件到任何一台机器上, 连接的相关信息在该目录 <code>vagrant/inventory</code>.<br>部署开始命令 <code>make ansible</code>.</p>
+<p>要求:</p>
+<ul>
+<li><code>ansible</code>    </li>
+</ul>
+<h1 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h1><p>登陆到游览器，输入服务器地址 (e.g.<a href="https://your-server/" target="_blank" rel="noopener">https://your-server/</a>). 默认配置重定向到HTTP请求到HTTPS.</p>
+<p>Elephant Shed官网提供了运行PostgreSQL的例子和他的情况. 此外你也获得了其他已安装的组件.</p>
+<p>服务起会向你要用户证书。每个部署程序区分每个用户不同. 在测试安装中(e.g. using Vagrant) 初始化用户是 <strong>admin</strong> 密码是 <strong>admin</strong>. 可以看下: <a href="users.html">Users</a>. 所有绑定的组件除了pgAdmin4都使用PAM 授权。 </p>
+<p>pgAdmin4 还不支持 PAM 授权. 它有自己的用户管理系统与所有系统用户分离.在安装配置中你会被要求安装初始化用户配置. 如果你部署了Vagrant 虚拟机， 初始化用户就是 <strong>admin@localhost</strong><br>，密码是 <strong>admin</strong>.</p>
+<p><img src="/2019/05/30/elephant-shed/el-portal.png" alt="Elephant Shed portal"> </p>
+<p>在新安装中，您将找到一个运行当前PostgreSQL主要版本的集群，其名称为 <code>main</code>.</p>
+<p>集群配置在这 <code>/etc/postgresql/&lt;major version&gt;/&lt;name&gt;/</code>.</p>
+<p>要从外部应用程序服务器使用PostgreSQL，只需要几个步骤.</p>
+<ol>
+<li><p>使用SSH或shellinabox打开一个shell去连接服务器 <a href="https://your-server/shellinabox" target="_blank" rel="noopener">https://your-server/shellinabox</a>.</p>
+</li>
+<li><p>切换用户 <code>postgres</code> 然后psql:</p>
+<ul>
+<li><code>sudo -u postgres psql</code></li>
+</ul>
+</li>
+<li><p>创建一个数据Create a database 和相应的应用用户, 可以选:</p>
+<ul>
+<li><code>psql: CREATE ROLE appuser1 WITH LOGIN PASSWORD &#39;testpass&#39;;</code></li>
+<li><code>psql: CREATE DATABASE appdb1 OWNER appuser1;</code></li>
+</ul>
+</li>
+<li><p>允许应用程序服务器的外部访问，开放给网络中每个人. 配置文件: <code>/etc/postgresql/&lt;major version&gt;/&lt;name&gt;/pg_hba.conf</code></p>
+</li>
+<li><p>(可选) 进行所需的配置更改和调整. <code>/etc/postgresql/&lt;major version&gt;/&lt;name&gt;/postgresql.conf</code></p>
+</li>
+<li><p>重新加载配置，选项:</p>
+<ul>
+<li>主页: 点击按钮 <code>Service</code> 下一步集群 ，然后在下拉菜单中选择 “Reload” </li>
+<li><code>psql</code>: <code>SELECT pg_reload_conf();</code></li>
+</ul>
+</li>
+<li><p>(可选) 配置超级用户以便能够使用pgAdmin4 <a href="https://your-server/pgadmin4" target="_blank" rel="noopener">https://your-server/pgadmin4</a> or other management tools</p>
+<ul>
+<li>为用户postgres创建密码: <code>\password</code></li>
+<li>创建个性化的超级用户: <code>CREATE USER &quot;sosna&quot; SUPERUSER;</code>, <code>\password &quot;sosna&quot;</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><h2 id="PostgreSQL"><a href="#PostgreSQL" class="headerlink" title="PostgreSQL"></a>PostgreSQL</h2><p>Elephant Shed基于<code>postgresql-common</code>，默认的PostgreSQL基于Debian的安装管理系统。创建，删除等任务或重命名PostgreSQL实例（PostgreSQL术语中的“集群”）应该是<br>通过<code>postgresql-common</code>的命令行实用程序<code>pg_createcluster</code>，<code>pg_dropcluster</code>和<code>pg_renamecluster</code>完成。</p>
+<h3 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h3><p>Beside the postgresql-common default configuration the<br><code>elephant-shed-postgresql</code> package adds additional parameters for the cluster<br>creation process. Some of these parameters are required by the<br>Elephant Shed components. E.g. pgBadger requires some special<br><code>log_line_prefix</code>. You can find this configuration under<br><code>/etc/postgresql-common/createcluster.d/elephant-shed.conf</code>. Be<br>careful when changing any of these values.</p>
+<h3 id="集群管理"><a href="#集群管理" class="headerlink" title="集群管理"></a>集群管理</h3><p>创建新集群命令 <code>pg_createcluster &lt;version&gt; &lt;name&gt;</code>.<br>通过命令<code>pg_lsclusters</code>安装集群和相关情况.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">postgres@stretch:~$ pg_lsclusters</span><br><span class="line">Ver Cluster  Port Status          Owner    Data directory  Log file</span><br><span class="line">9.6 main     5432 online          postgres /9.6/main       /log/9.6-main.log</span><br><span class="line">9.6 standby1 5433 online,recovery postgres /9.6/standby1   /log/9.6-standby1.log</span><br><span class="line">9.6 standby2 5434 online,recovery postgres /9.6/standby2   /log/9.6-standby2.log</span><br><span class="line">9.6 test     5435 online          postgres /9.6/test       /log/9.6-test.log</span><br></pre></td></tr></table></figure>
+<p>删除集群命令 `pg_dropcluster <version></version></p>
+<p><name>` (注意，会删除集群中的所有数据！).</name></p>
+<p>开始, 停止, 重启 或者 重载使用的命令是 `pg_ctlcluster <action> <version></version></action></p>
+<p><name>` 如下:</name></p>
+<ul>
+<li><code>start</code></li>
+<li><code>stop</code></li>
+<li><code>restart</code></li>
+<li><code>reload</code></li>
+</ul>
+<p>另外,你能用 systemctl (<code>systemctl &lt;action&gt;
+postgresql@&lt;version&gt;-&lt;name&gt;</code>) 或者 Cockpit web interface.</p>
+<p><img src="/2019/05/30/elephant-shed/cockpit_postgresql_service.png" alt="Cockpit Cluster Service"> </p>
+<p><em>注意:</em> The Elephant Shed 将来的版本将会包含集群管理 <a href="#portal">portal</a>.</p>
+<h2 id="门户网站"><a href="#门户网站" class="headerlink" title="门户网站"></a>门户网站</h2><p>门户网站是所有其他基于Web的入口点接口。它使用HTTPS和基本身份验证。每个用户<br>在Unix组中，<code>elephant-shed</code>可以访问它（参见[Users]（＃users））。</p>
+<p>门户网站还显示所有状态<br>PostgreSQL集群包括指向Cockpit服务的链接（为了启动或停止集群），日志文件，pgBadger报告和备份软件pgBackRest。</p>
+<p>顶部的导航栏允许在不同的网络之间切换服务。</p>
+<p>默认情况下，仅部署HTTPS的自签名证书。一个<br>大多数浏览器都会显示相应的安全警告。你可以改变<br>签名证书（例如来自您的公司CA，或来自[Let’s Encrypt]（<a href="https://letsencrypt.org/））。" target="_blank" rel="noopener">https://letsencrypt.org/））。</a><br>Web服务由Apache2提供。它还充当反向代理，以服务所有其他Web界面并实施身份验证。</p>
+<h3 id="PostgreSQL-集群"><a href="#PostgreSQL-集群" class="headerlink" title="PostgreSQL 集群"></a>PostgreSQL 集群</h3><p><img src="/2019/05/30/elephant-shed/portal_cluster_list.png" alt="Figure: PostgreSQL Cluster"></p>
+<p>本节概述了现有的PostgreSQL集群及其状态。<br>每个集群都能开关显示当前状态。<br>通过单击群集，将打开带有按钮的附加菜单。<br>目前，所有按钮都链接到需要确认的相应组件，因此不会直接触发任何操作，但这可能会在将来发生变化。</p>
+<h3 id="systemd-Service"><a href="#systemd-Service" class="headerlink" title="systemd - Service"></a>systemd - Service</h3><p>这链接到Cockpit中此PostgreSQL集群的配置。<br>这里可以配置在系统启动时启用或禁用相应的服务，还可以触发启动，停止和重新加载等操作。</p>
+<h3 id="systemd-Log"><a href="#systemd-Log" class="headerlink" title="systemd - Log"></a>systemd - Log</h3><p>如果为此群集启用了syslog（这是Elephant Shed创建的群集的默认设置），则链接到Cockpit中的相应日志条目。</p>
+<h3 id="Report-Run"><a href="#Report-Run" class="headerlink" title="Report - Run"></a>Report - Run</h3><p>默认情况下，每晚生成一次所有群集的pgBadger报告。<br>使用此服务，可以根据需要为特定群集生成报告。</p>
+<h3 id="Report-Show"><a href="#Report-Show" class="headerlink" title="Report - Show"></a>Report - Show</h3><p>链接到相应的pgBadger报告概述。<br>查看 <a href="#reporting-pgbadger">pgBadger</a>获得更多信息.</p>
+<h3 id="Backup"><a href="#Backup" class="headerlink" title="Backup"></a>Backup</h3><p>本节提供了几个使用pgBackRest进行备份的功能。<br>了解更多备份工具pgBackRest，可访问网站<a href="#backup-pgbackrest">pgBackRest</a>.</p>
+<h4 id="Full"><a href="#Full" class="headerlink" title="Full"></a>Full</h4><p>链接到Cockpit以启动临时完整备份。</p>
+<h4 id="Incremental"><a href="#Incremental" class="headerlink" title="Incremental"></a>Incremental</h4><p>链接到Cockpit以查看临时增量备份。</p>
+<h4 id="Info"><a href="#Info" class="headerlink" title="Info"></a>Info</h4><p>显示备份的状态。此按钮仅在第一次备份运行后显示。<br>此处显示可用备份和WAL归档的内容。</p>
+<p>获得更多信息: <a href="http://www.pgbackrest.org/user-guide.html#quickstart/backup-info" target="_blank" rel="noopener">http://www.pgbackrest.org/user-guide.html#quickstart/backup-info</a></p>
+<h3 id="Switches"><a href="#Switches" class="headerlink" title="Switches"></a>Switches</h3><h4 id="Archiving"><a href="#Archiving" class="headerlink" title="Archiving"></a>Archiving</h4><p>此开关显示是否设置了使用pgBackRest的存档命令。<br>可以使用’/ bin / true’设置一个或停用该功能。<br>时间点恢复需要存档，但对于pgBackRest备份更为重要。<br>如果通过门户或计时器触发备份，则会自动激活存档。</p>
+<p>手动更改服务 <code>pgbackrest-toggle-archiving@&lt;version&gt;-&lt;name&gt;.service</code>.<br>可以切换状态.</p>
+<h4 id="全备"><a href="#全备" class="headerlink" title="全备"></a>全备</h4><p>切换到启用或禁用定期备份。<br>已启用的备份作业（systemd timer）以绿色显示。<br>启动或停止计时器 <code>pgbackrest@&lt;version&gt;-&lt;name&gt;.timer</code>.<br>启用/禁用用于在下次重启后启用/禁用计时器。</p>
+<h4 id="增量备份"><a href="#增量备份" class="headerlink" title="增量备份"></a>增量备份</h4><p>切换到启用或禁用定期备份。<br>已启用的备份作业（systemd timer）以绿色显示。<br>要启动/停止计时器<code>pgbackrest-incr @ &lt;version&gt;  -  &lt;name&gt; .timer</code>。<br>启用/禁用用于在下次重启后启用/禁用计时器。</p>
+<h2 id="网页服务接口-Cockpit"><a href="#网页服务接口-Cockpit" class="headerlink" title="网页服务接口 - Cockpit"></a>网页服务接口 - Cockpit</h2><p>Cockpit 允许通过HTTPS远程管理所有系统的服务。<br>就像按下按钮使得启动、停止、重启服务如此简单. 还实时显示系统日志.</p>
+<p><img src="/2019/05/30/elephant-shed/cockpit_package_updates.png" alt="Figure: Cockpit Package Updates"></p>
+<h2 id="监控-Prometheus"><a href="#监控-Prometheus" class="headerlink" title="监控 - Prometheus"></a>监控 - Prometheus</h2><p>Prometheus是一种基于度量的服务器和服务监控系统。<br>它以给定的时间间隔从配置的目标收集指标，评估规则表达式，显示结果，并且如果观察到某些条件为真，则可以触发警报。</p>
+<p><img src="/2019/05/30/elephant-shed/prometheus-load.png" alt="Prometheus graphing the load"> </p>
+<p><img src="/2019/05/30/elephant-shed/prometheus-targets.png" alt="Prometheus targets"> </p>
+<h3 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h3><p>在此设置中，Prometheus堆栈由systemd控制的不同组件组成。<br>部署了以下功能。</p>
+<h4 id="prometheus-service"><a href="#prometheus-service" class="headerlink" title="prometheus.service"></a>prometheus.service</h4><p>监控系统和时间序列数据库 - 这是监控服务本身。它主动从不同来源提取指标。<br>它还提供内部指标和可通过门户访问的Web界面。</p>
+<p>配置文件:</p>
+<ul>
+<li><code>/etc/prometheus/elephant-shed-prometheus.yml</code></li>
+<li><code>/etc/default/elephant-shed-prometheus</code></li>
+</ul>
+<h4 id="prometheus-node-exporter-service"><a href="#prometheus-node-exporter-service" class="headerlink" title="prometheus-node-exporter.service"></a>prometheus-node-exporter.service</h4><p>机器指标的Prometheus导出器 - 此服务导出系统指标并侦听端口9100。<br>默认情况下，这些指标每30秒收集一次。</p>
+<p>配置文件:</p>
+<ul>
+<li><code>/etc/default/elephant-shed-prometheus-node-exporter</code></li>
+</ul>
+<h4 id="prometheus-sql-exporter-service"><a href="#prometheus-sql-exporter-service" class="headerlink" title="prometheus-sql-exporter.service"></a>prometheus-sql-exporter.service</h4><p>用于SQL指标的Prometheus导出程序 - 此服务收集PostgreSQL特定指标并侦听端口9237。<br>通过查询数据库来检索度量标准。<br>为了不产生额外的负载，仅每60秒收集度量。</p>
+<p><strong>警告: 不建议将<code>prometheus-sql-exporter</code>的监视间隔设置为低于60秒。<br>这可能会干扰正常的应用程序，并对PostgreSQL集群产生很大影响.</strong></p>
+<p><code>prometheus-sql-exporter.service</code>在启动时启动与每个数据库的一个连接，并保持此连接打开。<br>在每个连接的开头，<code>prometheus-sql-exporter.service</code>检查是否存在扩展名<code>pg_stat_statements</code>。<br>如果没有，该服务发出语句<code>CREATE EXTENSION pg_stat_statements</code>。</p>
+<p>配置文件:</p>
+<ul>
+<li><code>/etc/prometheus-sql-exporter.yml</code></li>
+</ul>
+<h4 id="update-prometheus-sql-exporter-config-timer"><a href="#update-prometheus-sql-exporter-config-timer" class="headerlink" title="update-prometheus-sql-exporter-config.timer"></a>update-prometheus-sql-exporter-config.timer</h4><p>此计时器定期触发<code>update-prometheus-sql-exporter-config.service</code>，每10分钟为<code>prometheus-sql-exporter</code>生成一个新配置。<br>这可确保每个新数据库集群和每个新数据库都自动包含在监视中。<br>可以手动调用update-prometheus-sql-exporter-config.service直接生成新配置。</p>
+<p>配置模板文件:</p>
+<ul>
+<li><code>prometheus-sql-exporter.yml.in</code></li>
+</ul>
+<p>配置 (运行):</p>
+<ul>
+<li><code>prometheus-sql-exporter.yml</code></li>
+</ul>
+<h3 id="更多资源"><a href="#更多资源" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="https://prometheus.io/docs/introduction/overview/" target="_blank" rel="noopener">https://prometheus.io/docs/introduction/overview/</a></li>
+<li><a href="https://github.com/prometheus/prometheus" target="_blank" rel="noopener">https://github.com/prometheus/prometheus</a><h2 id="看板-Grafana"><a href="#看板-Grafana" class="headerlink" title="看板 - Grafana"></a>看板 - Grafana</h2></li>
+</ul>
+<p>Grafana是一种从各种不同数据源创建图形和仪表板的工具。<br>默认安装的一个PostgreSQL看报包含最需要的相关指标和调试PostgreSQL服务。</p>
+<p>这些预先部署的仪表板通过<code>elephant-shed-graphana</code> Debian软件包，并可在将来更改。<br>它们是只读的，如果您进行任何更改，则需要以新名称保存。</p>
+<h3 id="PostgreSQL-Server-概貌"><a href="#PostgreSQL-Server-概貌" class="headerlink" title="PostgreSQL Server 概貌"></a>PostgreSQL Server 概貌</h3><p><img src="/2019/05/30/elephant-shed/grafana-overview.png" alt="Grafana - PostgreSQL Server Overview"> </p>
+<p>此仪表板以带有简单仪表的摘要部分开始，以提供整个系统的概述。<br>这些仪表可能表明当前存在的问题，或暗示未来可能出现的问题。</p>
+<p>仪表深度指标显示为图形。</p>
+<h3 id="服务起指标"><a href="#服务起指标" class="headerlink" title="服务起指标"></a>服务起指标</h3><p>服务器指标包括：CPU使用率（按类型/核心），磁盘使用情况，磁盘利用率，网络吞吐量等等。<br>配置以下模板筛选器：</p>
+<ul>
+<li><code>Disk</code>: 过滤一个或多个磁盘</li>
+<li><code>Interface</code>: 过滤一个或多个接口</li>
+<li><code>Filesystem</code>: 过滤或更多文件系统/挂载点</li>
+</ul>
+<h3 id="集群指标"><a href="#集群指标" class="headerlink" title="集群指标"></a>集群指标</h3><p>下一节包含PostgreSQL集群范围的指标，如连接（按类型/按数据库），事务数量，数据库增长等。<br>一次只显示一个群集。要切换当前显示的集群，请使用模板过滤器<code>PostgreSQL Cluster</code>。</p>
+<h3 id="数据库指标"><a href="#数据库指标" class="headerlink" title="数据库指标"></a>数据库指标</h3><p>数据库级别度量标准显示在<em> PostgreSQL Overview </em>仪表板的末尾。<br>默认情况下，会显示当前所选PostgreSQL群集的所有数据库的度量标准。<br>要过滤一个或多个数据库，可以使用模板过滤器“Database”。</p>
+<h3 id="更多资源-1"><a href="#更多资源-1" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="http://docs.grafana.org/" target="_blank" rel="noopener">http://docs.grafana.org/</a></li>
+<li><a href="https://github.com/grafana/grafana" target="_blank" rel="noopener">https://github.com/grafana/grafana</a></li>
+</ul>
+<h2 id="DBA-工具-pgAdmin4"><a href="#DBA-工具-pgAdmin4" class="headerlink" title="DBA 工具 - pgAdmin4"></a>DBA 工具 - pgAdmin4</h2><p><img src="/2019/05/30/elephant-shed/pgadmin.png" alt="pgAdmin4"> </p>
+<p>pgAdmin4是PostgreSQL的一个管理工具，可以帮助DBA执行许多不同的任务。<br>它提供用户管理，DDL功能，交互式SQL shell等。</p>
+<h3 id="更多资源-2"><a href="#更多资源-2" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="https://www.pgadmin.org/docs/pgadmin4/1.x/" target="_blank" rel="noopener">https://www.pgadmin.org/docs/pgadmin4/1.x/</a></li>
+</ul>
+<h2 id="备份-pgBackRest"><a href="#备份-pgBackRest" class="headerlink" title="备份 - pgBackRest"></a>备份 - pgBackRest</h2><p>Elephant Shed附带预装的备份解决方案<em> pgBackRest </em>。<br>每个PostgreSQL实例都可以通过发出命令<code>systemctl start pgbackrest @ &lt;version&gt;  -  &lt;name&gt;</code>或通过Web界面中的Cockpit启动备份来单独备份。<br>为每个实例列出了一个快捷方式。</p>
+<p>使用第一个创建每个群集的配置条目<br>备份运行。默认情况下，只设置<code>db-path</code>和<code>db-port</code>。</p>
+<p>单击在门户网站上的图标pgBackRest可以获得所有备份的列表</p>
+<p><img src="/2019/05/30/elephant-shed/el-backrest-start.png" alt="Backup via Cockpit"> </p>
+<p>pgBackRest知道3种类型的备份完整，增量和差异。<br>我们默认使用完整和差异。<br>默认情况下不安装差异备份的服务文件。</p>
+<h3 id="全量备份"><a href="#全量备份" class="headerlink" title="全量备份"></a>全量备份</h3><p>全量备份表示在给定时间点对数据库的全量备份。<br>备份由两部分组成，备份本身存储在<code>backup</code>中，WAL文件在备份期间写入，存储在<code>archive</code>中。</p>
+<p>为了确保这些WAL文件在归档中，我们在创建第一个备份之前自动启用WAL归档。</p>
+<p><strong>警告</strong>:如果启用了归档，则保留所有比最早存储的备份更新的WAL文件。<br>如果备份保留很长时间并且未禁用存档，则会占用备份位置中的大量空间。<br>通过删除备份，不再需要的WAL文件也被删除。</p>
+<h3 id="增量备份-1"><a href="#增量备份-1" class="headerlink" title="增量备份"></a>增量备份</h3><p>增量备份表示先前全量备份与给定点上的当前数据之间的已更改数据。<br>增量备份可能比全量备份小很多，但依赖于特定的先前全量备份。<br>如果没有此全量份，则无法恢复。</p>
+<h3 id="保留"><a href="#保留" class="headerlink" title="保留"></a>保留</h3><p>要清理空间，需要删除旧备份。<br>pgBackRest需要知道要保留多少全量备份。<br>如果达到该数量，将从最旧的备份开始删除所有其他备份。<br>如果删除全量备份，则还将删除所有依赖于它的增量备份。<br>这是必要的，因为如果没有匹配的全量备份，则无法还原增量备份。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>配置文件目录 <code>/etc/pgbackrest.conf</code>.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">repo-path=/var/lib/pgbackrest</span><br><span class="line"></span><br><span class="line">[9.6-main]</span><br><span class="line">db-path=/var/lib/postgresql/9.6/main</span><br><span class="line">db-port=5432</span><br><span class="line"></span><br><span class="line">[9.6-test]</span><br><span class="line">db-port=5433</span><br><span class="line">db-path=/var/lib/postgresql/9.6/test</span><br></pre></td></tr></table></figure>
+<p>全局部分为每个现有和未来的数据库集群设置默认配置。<br>对于每个单个群集，可以更改这些默认值。<br>这里将解释一些基本选项。<br>有关完整概述，请参阅文档。</p>
+<p>如果服务是用ansible设置, 另外还设置了以下<code>[global]</code>参数：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">retention-full=4</span><br><span class="line">compress-level=6</span><br><span class="line">spool-path=/mnt/backup/pgbackrest_spool</span><br><span class="line">archive-async=y</span><br><span class="line">archive-queue-max=1099511627776</span><br><span class="line">repo-path=/mnt/backup/pgbackrest</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h4 id="retention-full"><a href="#retention-full" class="headerlink" title="retention-full"></a>retention-full</h4><p>此选项定义应保留多少完整备份。</p>
+<p><strong>危险: 如果存储的完整备份比<code>retention-full</code>更多，pgBackRest将删除最旧的备份以保持完全备份！保留完整备份！</strong></p>
+<h4 id="compress-level"><a href="#compress-level" class="headerlink" title="compress-level"></a>compress-level</h4><p>要使用的gzip压缩级别（6是默认值）.</p>
+<h4 id="archive-async"><a href="#archive-async" class="headerlink" title="archive-async"></a>archive-async</h4><p>启用WAL文件的异步归档，从而实现更高的归档吞吐量。</p>
+<h4 id="spool-path"><a href="#spool-path" class="headerlink" title="spool-path"></a>spool-path</h4><p>在哪里保留异步归档的附加信息（状态目录）。</p>
+<h4 id="archive-queue-max"><a href="#archive-queue-max" class="headerlink" title="archive-queue-max"></a>archive-queue-max</h4><p>丢弃段之前要保留多少个WAL段。<br><em>注意：我们配置1TB的值以确保pgbackrest默认情况下永远不会抛出WAL段</em></p>
+<h4 id="repo-path"><a href="#repo-path" class="headerlink" title="repo-path"></a>repo-path</h4><p>这将设置存储备份和WAL文件的主目录。<br>它可以设置为任何所需的安装点，因此可以轻松地备份到远程服务器。</p>
+<h3 id="Backup-1"><a href="#Backup-1" class="headerlink" title="Backup"></a>Backup</h3><p>对于每个群集，都有一个systemd服务，它执行完整或增量备份。</p>
+<ul>
+<li>pgbackrest@\&lt;version>-\&lt;name></li>
+<li>pgbackrest-incr@\&lt;version>-\&lt;name></li>
+</ul>
+<p>要创建临时备份，可以启动相应的服务。<br><code>systemctl start pgbackrest @ 9.6-main</code>将创建集群<code>9.6-main</code>的完整备份。</p>
+<p>如果没有以前的完整备份可用，<code>pgbackrest-incr @</code>也将创建一个完整备份。</p>
+<h3 id="Automation"><a href="#Automation" class="headerlink" title="Automation"></a>Automation</h3><p>要自动创建备份和执行保留策略，每个群集有两个systemd计时器。</p>
+<ul>
+<li>pgbackrest@<version>-<name>.timer</name></version></li>
+<li>pgbackrest-incr@<version>-<name>.timer</name></version></li>
+</ul>
+<p><code>pgbackrest @ &lt;version&gt;  -  &lt;name&gt; .timer</code>触发完整备份，<code>pgbackrest-incr @ &lt;version&gt;  -  &lt;name&gt; .timer</code>触发增量备份。</p>
+<p>这些计时器是为每个集群创建的，并使用默认时序进行初始化。<br>可以通过systemd或Web门户为每个数据库集群独立启用计时器。<br>要完全启用定时备份， <code>timer</code> 必须 <em>started</em> <strong>和</strong> <em>enabled</em>.<br>如果 <code>timer</code> 是 <em>started</em> 但是没有 <em>enabled</em> ，systemd 在重启后不启动timer.</p>
+<p>请记住，仅启用增量备份仅适用于较短的时间段，特殊情况（如不更改数据库）或完整备份是以其他方式触发的。<br>为了将存储和恢复时间保持在合理的水平，需要定期进行完全备份。</p>
+<h4 id="pgbackrest-timer"><a href="#pgbackrest-timer" class="headerlink" title="pgbackrest@.timer"></a>pgbackrest@.timer</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># /lib/systemd/system/pgbackrest@.timer</span><br><span class="line">[Unit]</span><br><span class="line">Description=Automated pgBackRest full backup of PostgreSQL cluster %i</span><br><span class="line"></span><br><span class="line">[Timer]</span><br><span class="line">OnCalendar=Sun *-*-* 01:00:00</span><br><span class="line">RandomizedDelaySec=2h</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>此计时器每周日凌晨01:00或随机最多2小时后触发完整备份。<br>由RandomizedDelaySec = 2h设置的随机延迟被设置，因此systemd可以在给定的时间范围内调度许多定时器。<br>这么做是为了所有集群的备份不是在同一个时间启动，阻塞了I/O</p>
+<h4 id="pgbackrest-incr-timer"><a href="#pgbackrest-incr-timer" class="headerlink" title="pgbackrest-incr@.timer"></a>pgbackrest-incr@.timer</h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># /lib/systemd/system/pgbackrest-incr@.timer</span><br><span class="line">[Unit]</span><br><span class="line">Description=Automated pgBackRest incremental backup of PostgreSQL cluster %i</span><br><span class="line"></span><br><span class="line">[Timer]</span><br><span class="line">OnCalendar=Tue,Thu *-*-* 01:00:00</span><br><span class="line">RandomizedDelaySec=2h</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<p>此计时器每周二和周四凌晨01:00或随机最多2小时后触发增量备份。</p>
+<h4 id="WAL-归档"><a href="#WAL-归档" class="headerlink" title="WAL 归档"></a>WAL 归档</h4><p>默认情况下，对于新的PostgreSQL集群，将禁用WAL归档。<br>它可以使用门户网站（参见[portal]（＃portal））或启动<code>pgbackrest-toggle-archving.service</code>来激活。<br>该服务将归档模式切换为打开或关闭，具体取决于之前的状态。</p>
+<p><em>注意：</em>如果禁用归档并启动完整或增量备份（手动或通过计时器），则会自动启用归档。<br>需要执行此步骤以确保还原所需的所有WAL文件都存档在basebackup。<br><strong>Archiving is <em>not</em> disabled after the backup run.</strong></p>
+<h3 id="还原"><a href="#还原" class="headerlink" title="还原"></a>还原</h3><p><strong>还原是一种侵入性操作，如果未正确执行，可能会破坏数据!</strong></p>
+<p>要还原备份，有两个主要方法full和delta。</p>
+<h4 id="Full-Restore"><a href="#Full-Restore" class="headerlink" title="Full Restore"></a>Full Restore</h4><p>根据给定的备份全部还原（默认情况下为最新）还原到给定（默认）目标。<br>还原命令要求目标目录为空。.<br>此方法可用于新的机器，小型集群，或者是大部分数据不正确的情况下.</p>
+<p>步骤如下.</p>
+<ol>
+<li>Stop the cluster (if still running)</li>
+<li>Delete or move all remaining data</li>
+<li>Restore full content from backup</li>
+</ol>
+<p><em>使用用户 <code>postgres</code>操作</em>.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 1. 停止集群</span><br><span class="line">pg_ctlcluster &lt;major version&gt; &lt;name&gt; stop</span><br><span class="line"></span><br><span class="line"># 2. 删除或移除所有存在数据</span><br><span class="line">mv /var/lib/postgresql/&lt;major version&gt;/&lt;name&gt; /var/somewhere-save</span><br><span class="line">mkdir /var/lib/postgresql/&lt;major version&gt;/&lt;name&gt;</span><br><span class="line"></span><br><span class="line"># 3. 从备份中还原所有数据</span><br><span class="line">pgbackrest --stanza=&lt;major version&gt;-&lt;name&gt; restore</span><br></pre></td></tr></table></figure>
+<p>然后再次重启集群.<br>如果有足够的可用存储空间，则最好将数据移动到保存位置而不是删除。</p>
+<h4 id="Delta-还原"><a href="#Delta-还原" class="headerlink" title="Delta 还原"></a>Delta 还原</h4><p>增量恢复不需要干净的目标，只能复制与备份不同的文件。<br>这种方法可以快得多，特别是如果大多数底层文件自上次备份以来没有改变。</p>
+<p><strong>这有可能破坏数据!</strong><br>因为这应用于集群数据，可能会造成损害。<br>数据不在备份/ WAL存档中而在当前群集中的将会丢失！</p>
+<p>操作一个 delta 还原.</p>
+<ol>
+<li>停止集群 (如果在运行中)</li>
+<li>从备份中还原所有内容</li>
+</ol>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 1. 停止集群</span><br><span class="line">pg_ctlcluster &lt;major version&gt; &lt;name&gt; stop</span><br><span class="line"></span><br><span class="line"># 2. 从备份中还原所有内容</span><br><span class="line">pgbackrest --stanza=&lt;major version&gt;-&lt;name&gt; --delta restore</span><br></pre></td></tr></table></figure>
+<p>操作完后重启</p>
+<h4 id="时间点恢复"><a href="#时间点恢复" class="headerlink" title="时间点恢复"></a>时间点恢复</h4><p>该方法是全部还原.<br>这意味着所有basebackup文件并从存档中复制回来并应用所有WAL文件.</p>
+<p>如果要恢复另一个恢复目标，则必须指定<code>--type</code>和<code>--target</code>。<br>大多数时候，人们希望将数据库恢复到给定的时间点（例如’2017-08-24 12:00:00’）。<br>这将需要切换<code>--type = time</code>和<code>--target =&#39;2017-08-24 12：00：00&#39;</code>。</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pgbackrest --stanza=&lt;major version&gt;-&lt;name&gt; --type=time --target=&quot;&lt;ISO timestamp&gt;&quot; restore</span><br></pre></td></tr></table></figure>
+<h3 id="更多资源-3"><a href="#更多资源-3" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="http://www.pgbackrest.org/user-guide.html" target="_blank" rel="noopener">http://www.pgbackrest.org/user-guide.html</a></li>
+<li><a href="http://www.pgbackrest.org/command.html" target="_blank" rel="noopener">http://www.pgbackrest.org/command.html</a></li>
+<li><a href="http://www.pgbackrest.org/configuration.html" target="_blank" rel="noopener">http://www.pgbackrest.org/configuration.html</a></li>
+</ul>
+<h2 id="报告-pgBadger"><a href="#报告-pgBadger" class="headerlink" title="报告 - pgBadger"></a>报告 - pgBadger</h2><p>为每个PostgreSQL创建一个pgBadger服务实例。每次新的时候都会自动生成和更新这些服务<br>创建或删除集群（systemd-generators）。</p>
+<p>pgBadger systemd计时器可确保定期更新报告。<br>默认情况下，这是每天23:00。</p>
+<p>每个pgBadger服务解析的PostgreSQL相应PostgreSQL实例的日志文件. 生成的报告保存在其中<br><code>/var/lib/pgbadger/&lt;version&gt;-&lt;name&gt;</code> (e.g. <code>/var/lib/pgbadger/9.6-main/</code>).</p>
+<p>可以在Web界面中访问所有报告。<br>日历提供对每日和每周报告的访问。</p>
+<p>可以使用相应的服务（例如<code>pgbadger @ 9.6-main.service</code>）或使用[portal]（＃portal）触发这些报告的手动更新。<br><em>所有</em>报告的更新可以使用该服务 <code>pgbadger.service</code>触发.</p>
+<p><em>注意:</em> 更改postgresql.conf设置，如<code>log_line_prefix</code>或<br><code>lc_messages</code>可能导致pgBadger报告不再被更新。</p>
+<p><img src="/2019/05/30/elephant-shed/pgbadger-overview.png" alt="pgBadger overview"> </p>
+<h2 id="Web-终端-Shell-In-A-Box"><a href="#Web-终端-Shell-In-A-Box" class="headerlink" title="Web 终端 - Shell In A Box"></a>Web 终端 - Shell In A Box</h2><p>Shell In A Box是一个方便的基于Web的终端。它可以像普通的控制台连接一样使用。<br>需要显式登录和身份验证。<br>要更改设置（例如颜色主题），只需右键单击终端窗口上的任意位置即可。</p>
+<h3 id="更多资源-4"><a href="#更多资源-4" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="https://github.com/shellinabox/shellinabox" target="_blank" rel="noopener">https://github.com/shellinabox/shellinabox</a></li>
+</ul>
+<h2 id="防火墙-ferm"><a href="#防火墙-ferm" class="headerlink" title="防火墙 - ferm"></a>防火墙 - ferm</h2><p>默认情况下，ferm作为前端安装，用于创建iptables规则。<br>默认配置部署在以下位置：</p>
+<ul>
+<li><code>/etc/ferm.conf</code></li>
+<li><code>/etc/ferm.d/elephant-shed.conf</code></li>
+</ul>
+<p>传入流量的默认策略设置为DROP。<br>允许本地流量，我们明确将以下传入流量列入白名单：</p>
+<ul>
+<li>state <code>RELATED</code>,<code>ESTABLISHED</code></li>
+<li>ICMP (ping)</li>
+<li>SSH</li>
+<li>HTTP / HTTPS</li>
+<li>PostgreSQL: Ports 5432-5439 (first 8 clusters)</li>
+</ul>
+<p>网络访问的每个附加服务也需要列入白名单。<br>要配置自己的防火墙规则，只需在<code>/ etc / ferm.d /</code>中创建一个扩展名为<code>.conf</code>的ferm配置。<br>这些配置文件在重启时由ferm自动加载。</p>
+<p><em>注意:</em> Prometheus和Grafana等服务默认只能通过<br>管理身份验证的反向代理。如果提供这些服务<br>通过网络可以到达，必须采取预防措施。</p>
+<h3 id="更多资源-5"><a href="#更多资源-5" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="http://ferm.foo-projects.org/" target="_blank" rel="noopener">http://ferm.foo-projects.org/</a></li>
+<li><a href="https://wiki.debian.org/ferm" target="_blank" rel="noopener">https://wiki.debian.org/ferm</a></li>
+</ul>
+<h2 id="远程控制-tmate"><a href="#远程控制-tmate" class="headerlink" title="远程控制 - tmate"></a>远程控制 - tmate</h2><p>tmate是流行的终端多路复用器tmux的分支。<br>如果需要，它用于提供远程支持。</p>
+<p>它预先配置为连接到中继服务器（<code>tmate.credativ.com</code>），并允许用户通过发送包含秘密令牌的SSH命令与第三方共享当前终端。</p>
+<p>有两种操作模式，读写和只读。<br>这使用户能够向第三方临时访问当前终端。<br>用户可以随时观看终端并审核第三方采取的行动。</p>
+<ul>
+<li>tmate 默认不运行，需要时再运行</li>
+<li>当启动shell关闭时，连接也会关闭</li>
+<li>使用的后端是完全可配置的（在<code>/etc/tmate.conf</code>中）并预设为<code>tmate.credativ.com</code></li>
+<li>tmate包含在技术预览中以评估潜力</li>
+</ul>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>开始 tmate (打开一个终端)</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmate</span><br></pre></td></tr></table></figure>
+<p>显示需要提供给第三方的凭证（安全）</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmate show-messages</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/30/elephant-shed/tmate.png" alt="tmate with multiple panes"> </p>
+<p>有关进一步的用法，请参阅以下有关tmux的其他资源。</p>
+<h3 id="更多资源-6"><a href="#更多资源-6" class="headerlink" title="更多资源"></a>更多资源</h3><ul>
+<li><a href="https://tmate.io/" target="_blank" rel="noopener">https://tmate.io/</a></li>
+<li><a href="https://man.openbsd.org/OpenBSD-current/man1/tmux.1" target="_blank" rel="noopener">https://man.openbsd.org/OpenBSD-current/man1/tmux.1</a></li>
+</ul>
+<h2 id="配置修订-etckeeper"><a href="#配置修订-etckeeper" class="headerlink" title="配置修订 - etckeeper"></a>配置修订 - etckeeper</h2><p>etckeeper是一组工具和钩子，用于将所有配置保存在git存储库中的<code>/ etc</code>中。<br>提交可以手动完成，也可以通过时间或包管理器挂钩自动完成。</p>
+<p>可以查看配置更改并与以前的版本进行比较。<br>如有必要，可以恢复以前的设置。</p>
+<h4 id="更多资源-7"><a href="#更多资源-7" class="headerlink" title="更多资源"></a>更多资源</h4><ul>
+<li><a href="https://etckeeper.branchable.com/" target="_blank" rel="noopener">https://etckeeper.branchable.com/</a></li>
+<li><a href="https://www.thomas-krenn.com/de/wiki/Etc-Verzeichnis_mit_etckeeper_versionieren" target="_blank" rel="noopener">https://www.thomas-krenn.com/de/wiki/Etc-Verzeichnis_mit_etckeeper_versionieren</a></li>
+</ul>
+<h1 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h1><p>网页受密码保护(HTTP 基本授权) ，通过PAM使用系统用户. 通过Ansible部署时, 初始化用户 <strong>admin</strong> 密码 <strong>admin</strong>. 该用户可以用户网页可以用户SSH和PostgreSQL。</p>
+<p>创建新用户, 使用<code>adduser</code>, 增加该用户到 <strong>elephant-shed</strong> 群.</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser myon</span><br><span class="line">adduser myon elephant-shed</span><br></pre></td></tr></table></figure>
+<p>在 RedHat/CentOS, 使用 <code>vigr</code> 增加新用户到 <strong>elephant-shed</strong> 群.</p>
+<h1 id="Limitations"><a href="#Limitations" class="headerlink" title="Limitations"></a>Limitations</h1><p>以下支持的 PostgreSQL 版本:</p>
+<ul>
+<li>11</li>
+<li>10</li>
+<li>9.6</li>
+<li>9.5</li>
+<li>9.4</li>
+</ul>
+<p>其他版本可用但未完全集成在所有组件中。<br>这可能需要额外的手动调整。</p>
+<p>所有PostgreSQL版本的软件包都可以通过Debian / Ubuntu上的<em> apt.postgresql.org </em>存储库安装，<br>和RedHat / CentOS上的<em> yum.postgresql.org </em>。<br>更多信息查看网站 <a href="https://apt.postgresql.org/" target="_blank" rel="noopener">https://apt.postgresql.org/</a>.</p>
+<h1 id="已知的错误和问题"><a href="#已知的错误和问题" class="headerlink" title="已知的错误和问题"></a>已知的错误和问题</h1><h2 id="PostgreSQL-1"><a href="#PostgreSQL-1" class="headerlink" title="PostgreSQL"></a>PostgreSQL</h2><ul>
+<li><code>prometheus-sql-exporter</code>监视代理程序永久保留<br>连接对所有数据库开放，这会阻止<code>DROP DATABASE</code><br>工作。要删除数据库，请先停止<code>prometheus-sql-exporter</code>。<br>这可以通过Web界面Cockpit实现：[services＃/ prometheus-sql-exporter.service]（/ system / services＃/ prometheus-sql-exporter.service）。</li>
+</ul>
+<h2 id="pgadmin4"><a href="#pgadmin4" class="headerlink" title="pgadmin4"></a>pgadmin4</h2><ul>
+<li>pgadmin4 不使用PAM授权。</li>
+<li>默认情况下，pgadmin4 不显示本地数据库.</li>
+</ul>
+<h2 id="Portal"><a href="#Portal" class="headerlink" title="Portal"></a>Portal</h2><ul>
+<li>注销后直接重新登录不起作用。重新加载页面是必要的。</li>
+</ul>
+<h2 id="RedHat-CentOS"><a href="#RedHat-CentOS" class="headerlink" title="RedHat / CentOS"></a>RedHat / CentOS</h2><ul>
+<li>当S​​ELinux启用时，pgAdmin4不起作用.</li>
+<li>当SELinux启用时，shellinabox不起作用.<h1 id="证书"><a href="#证书" class="headerlink" title="证书"></a>证书</h1></li>
+</ul>
+<p>Elephant Shed itself 证书在 GPLv3 (<a href="https://www.gnu.org/licenses/gpl-3.0.de.html" target="_blank" rel="noopener">https://www.gnu.org/licenses/gpl-3.0.de.html</a>).</p>
+<p>所有捆绑组件都是免费/开源软件，具有已知且经过批准的开源许可证。</p>
+<h1 id="支持和更多"><a href="#支持和更多" class="headerlink" title="支持和更多"></a>支持和更多</h1><h2 id="你有问题吗？或想要知道的更多？"><a href="#你有问题吗？或想要知道的更多？" class="headerlink" title="你有问题吗？或想要知道的更多？"></a>你有问题吗？或想要知道的更多？</h2><ul>
+<li><strong>Project page</strong> <a href="https://elephant-shed.io" target="_blank" rel="noopener">elephant-shed.io</a></li>
+<li><strong>Git</strong> <a href="https://github.com/credativ/elephant-shed/" target="_blank" rel="noopener">github.com/credativ/elephant-shed</a></li>
+<li><strong>Web-Chat</strong> <a href="https://webchat.oftc.net/?nick=web-user-.&amp;channels=elephant-shed&amp;uio=MT11bmRlZmluZWQmMj10cnVlJjk9dHJ1ZSYxMT0yMzY31" target="_blank" rel="noopener">#elephant-shed</a></li>
+<li><strong>IRC</strong> <a href="https://webchat.oftc.net/?channels=elephant-shed&amp;uio=MT11bmRlZmluZWQmMj10cnVlJjk9dHJ1ZSYxMT0yMzY31" target="_blank" rel="noopener">#elephant-shed</a> on <a href="https://www.oftc.net/" target="_blank" rel="noopener">irc.oftc.net</a></li>
+</ul>
+<h2 id="你需要专业支持或者更多服务吗？"><a href="#你需要专业支持或者更多服务吗？" class="headerlink" title="你需要专业支持或者更多服务吗？"></a>你需要专业支持或者更多服务吗？</h2><p>Elephant Shed 是一个开源项目, 开发维护是由 cre<span style="color: red;">d</span>ativ.</p>
+<p>对于Elephant Shed PostgreSQL应用, cre<span style="color: red;">d</span>ativ 提供全面的技术支持, 一年365天，一天24小时提供服务.</p>
+<p>安装和集成支持，以及介绍也是Elephant Shed PostgreSQL credativ其中一部分服务。如果您有兴趣，请随时与我们联系。</p>
+<p><img src="/2019/05/30/elephant-shed/logo_credativ_96.png" alt="logo_credativ_96.png"> </p>
+<ul>
+<li><strong>Web</strong> <a href="https://credativ.de" target="_blank" rel="noopener">credativ.de</a></li>
+<li><strong>E-Mail:</strong> <a href="mailto:info@credativ.de" target="_blank" rel="noopener">info@credativ.de</a></li>
+<li><strong>Phone:</strong> <a href="tel:+49216699010" target="_blank" rel="noopener">+49 2166 9901-0</a></li>
+</ul>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/elephant/">elephant</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/20/addExtension/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">How To Add Extensions To PG on Ubuntu</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/16/installing-pgAdmin4-and-pg/">
+                <span class="level-item">installing pgAdmin4 and pg on Ubuntu</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://qyqy22.github.io/2019/05/30/elephant-shed/';
+        this.page.identifier = '2019/05/30/elephant-shed/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'https-highgosoftware-github-io' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/gallery/logocat.png" alt="Jac">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jac
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Shared knowledge
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Vancouver,BC</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/qyqy22/qyqy22.github.io.git" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/qyqy22/qyqy22.github.io.git">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/rss2.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Table of Contents
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#介绍">
+        <span class="has-mr-6">1</span>
+        <span>介绍</span>
+        </a></li><li>
+        <a class="is-flex" href="#安装">
+        <span class="has-mr-6">2</span>
+        <span>安装</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#安装包">
+        <span class="has-mr-6">2.1</span>
+        <span>安装包</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#在Debian和Ubuntu上安装">
+        <span class="has-mr-6">2.1.1</span>
+        <span>在Debian和Ubuntu上安装</span>
+        </a></li><li>
+        <a class="is-flex" href="#在RedHat和CentOS系统上安装">
+        <span class="has-mr-6">2.1.2</span>
+        <span>在RedHat和CentOS系统上安装</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#源码安装">
+        <span class="has-mr-6">2.2</span>
+        <span>源码安装</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#源码构建Debian包">
+        <span class="has-mr-6">2.2.1</span>
+        <span>源码构建Debian包</span>
+        </a></li><li>
+        <a class="is-flex" href="#构建文档">
+        <span class="has-mr-6">2.2.2</span>
+        <span>构建文档</span>
+        </a></li><li>
+        <a class="is-flex" href="#创建Vagrant测试">
+        <span class="has-mr-6">2.2.3</span>
+        <span>创建Vagrant测试</span>
+        </a></li><li>
+        <a class="is-flex" href="#部署到远程服务器">
+        <span class="has-mr-6">2.2.4</span>
+        <span>部署到远程服务器</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#第一步">
+        <span class="has-mr-6">3</span>
+        <span>第一步</span>
+        </a></li><li>
+        <a class="is-flex" href="#组件">
+        <span class="has-mr-6">4</span>
+        <span>组件</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#PostgreSQL">
+        <span class="has-mr-6">4.1</span>
+        <span>PostgreSQL</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#默认配置">
+        <span class="has-mr-6">4.1.1</span>
+        <span>默认配置</span>
+        </a></li><li>
+        <a class="is-flex" href="#集群管理">
+        <span class="has-mr-6">4.1.2</span>
+        <span>集群管理</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#门户网站">
+        <span class="has-mr-6">4.2</span>
+        <span>门户网站</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#PostgreSQL-集群">
+        <span class="has-mr-6">4.2.1</span>
+        <span>PostgreSQL 集群</span>
+        </a></li><li>
+        <a class="is-flex" href="#systemd-Service">
+        <span class="has-mr-6">4.2.2</span>
+        <span>systemd - Service</span>
+        </a></li><li>
+        <a class="is-flex" href="#systemd-Log">
+        <span class="has-mr-6">4.2.3</span>
+        <span>systemd - Log</span>
+        </a></li><li>
+        <a class="is-flex" href="#Report-Run">
+        <span class="has-mr-6">4.2.4</span>
+        <span>Report - Run</span>
+        </a></li><li>
+        <a class="is-flex" href="#Report-Show">
+        <span class="has-mr-6">4.2.5</span>
+        <span>Report - Show</span>
+        </a></li><li>
+        <a class="is-flex" href="#Backup">
+        <span class="has-mr-6">4.2.6</span>
+        <span>Backup</span>
+        </a></li><li>
+        <a class="is-flex" href="#Switches">
+        <span class="has-mr-6">4.2.7</span>
+        <span>Switches</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#网页服务接口-Cockpit">
+        <span class="has-mr-6">4.3</span>
+        <span>网页服务接口 - Cockpit</span>
+        </a></li><li>
+        <a class="is-flex" href="#监控-Prometheus">
+        <span class="has-mr-6">4.4</span>
+        <span>监控 - Prometheus</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#服务">
+        <span class="has-mr-6">4.4.1</span>
+        <span>服务</span>
+        </a></li><li>
+        <a class="is-flex" href="#更多资源">
+        <span class="has-mr-6">4.4.2</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#看板-Grafana">
+        <span class="has-mr-6">4.5</span>
+        <span>看板 - Grafana</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#PostgreSQL-Server-概貌">
+        <span class="has-mr-6">4.5.1</span>
+        <span>PostgreSQL Server 概貌</span>
+        </a></li><li>
+        <a class="is-flex" href="#服务起指标">
+        <span class="has-mr-6">4.5.2</span>
+        <span>服务起指标</span>
+        </a></li><li>
+        <a class="is-flex" href="#集群指标">
+        <span class="has-mr-6">4.5.3</span>
+        <span>集群指标</span>
+        </a></li><li>
+        <a class="is-flex" href="#数据库指标">
+        <span class="has-mr-6">4.5.4</span>
+        <span>数据库指标</span>
+        </a></li><li>
+        <a class="is-flex" href="#更多资源-1">
+        <span class="has-mr-6">4.5.5</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#DBA-工具-pgAdmin4">
+        <span class="has-mr-6">4.6</span>
+        <span>DBA 工具 - pgAdmin4</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#更多资源-2">
+        <span class="has-mr-6">4.6.1</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#备份-pgBackRest">
+        <span class="has-mr-6">4.7</span>
+        <span>备份 - pgBackRest</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#全量备份">
+        <span class="has-mr-6">4.7.1</span>
+        <span>全量备份</span>
+        </a></li><li>
+        <a class="is-flex" href="#增量备份-1">
+        <span class="has-mr-6">4.7.2</span>
+        <span>增量备份</span>
+        </a></li><li>
+        <a class="is-flex" href="#保留">
+        <span class="has-mr-6">4.7.3</span>
+        <span>保留</span>
+        </a></li><li>
+        <a class="is-flex" href="#配置">
+        <span class="has-mr-6">4.7.4</span>
+        <span>配置</span>
+        </a></li><li>
+        <a class="is-flex" href="#Backup-1">
+        <span class="has-mr-6">4.7.5</span>
+        <span>Backup</span>
+        </a></li><li>
+        <a class="is-flex" href="#Automation">
+        <span class="has-mr-6">4.7.6</span>
+        <span>Automation</span>
+        </a></li><li>
+        <a class="is-flex" href="#还原">
+        <span class="has-mr-6">4.7.7</span>
+        <span>还原</span>
+        </a></li><li>
+        <a class="is-flex" href="#更多资源-3">
+        <span class="has-mr-6">4.7.8</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#报告-pgBadger">
+        <span class="has-mr-6">4.8</span>
+        <span>报告 - pgBadger</span>
+        </a></li><li>
+        <a class="is-flex" href="#Web-终端-Shell-In-A-Box">
+        <span class="has-mr-6">4.9</span>
+        <span>Web 终端 - Shell In A Box</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#更多资源-4">
+        <span class="has-mr-6">4.9.1</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#防火墙-ferm">
+        <span class="has-mr-6">4.10</span>
+        <span>防火墙 - ferm</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#更多资源-5">
+        <span class="has-mr-6">4.10.1</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#远程控制-tmate">
+        <span class="has-mr-6">4.11</span>
+        <span>远程控制 - tmate</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Usage">
+        <span class="has-mr-6">4.11.1</span>
+        <span>Usage</span>
+        </a></li><li>
+        <a class="is-flex" href="#更多资源-6">
+        <span class="has-mr-6">4.11.2</span>
+        <span>更多资源</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#配置修订-etckeeper">
+        <span class="has-mr-6">4.12</span>
+        <span>配置修订 - etckeeper</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#用户">
+        <span class="has-mr-6">5</span>
+        <span>用户</span>
+        </a></li><li>
+        <a class="is-flex" href="#Limitations">
+        <span class="has-mr-6">6</span>
+        <span>Limitations</span>
+        </a></li><li>
+        <a class="is-flex" href="#已知的错误和问题">
+        <span class="has-mr-6">7</span>
+        <span>已知的错误和问题</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#PostgreSQL-1">
+        <span class="has-mr-6">7.1</span>
+        <span>PostgreSQL</span>
+        </a></li><li>
+        <a class="is-flex" href="#pgadmin4">
+        <span class="has-mr-6">7.2</span>
+        <span>pgadmin4</span>
+        </a></li><li>
+        <a class="is-flex" href="#Portal">
+        <span class="has-mr-6">7.3</span>
+        <span>Portal</span>
+        </a></li><li>
+        <a class="is-flex" href="#RedHat-CentOS">
+        <span class="has-mr-6">7.4</span>
+        <span>RedHat / CentOS</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#证书">
+        <span class="has-mr-6">8</span>
+        <span>证书</span>
+        </a></li><li>
+        <a class="is-flex" href="#支持和更多">
+        <span class="has-mr-6">9</span>
+        <span>支持和更多</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#你有问题吗？或想要知道的更多？">
+        <span class="has-mr-6">9.1</span>
+        <span>你有问题吗？或想要知道的更多？</span>
+        </a></li><li>
+        <a class="is-flex" href="#你需要专业支持或者更多服务吗？">
+        <span class="has-mr-6">9.2</span>
+        <span>你需要专业支持或者更多服务吗？</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/qyqy22/qyqy22.github.io.git" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/elephant/">
+            <span class="level-start">
+                <span class="level-item">elephant</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/extension/">
+            <span class="level-start">
+                <span class="level-item">extension</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/postgresql/">
+            <span class="level-start">
+                <span class="level-item">postgresql</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/elephant/" style="font-size: 10px;">elephant</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo github</a> <a href="/tags/pgAdmin4-postgresql/" style="font-size: 10px;">pgAdmin4 postgresql</a> <a href="/tags/postgresql/" style="font-size: 10px;">postgresql</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/addPostgis/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/cat.jpg" alt="addPostgis">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T17:05:45.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/addPostgis/" class="has-link-black-ter is-size-6">addPostgis</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/20/addExtension/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time></div>
+                    <a href="/2019/06/20/addExtension/" class="has-link-black-ter is-size-6">How To Add Extensions To PG on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/30/elephant-shed/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time></div>
+                    <a href="/2019/05/30/elephant-shed/" class="has-link-black-ter is-size-6">Elephant Shed</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time></div>
+                    <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="has-link-black-ter is-size-6">installing pgAdmin4 and pg on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/14/hexo-github/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="Hexo Github">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:58:06.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/hexo-github/" class="has-link-black-ter is-size-6">Hexo Github</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/elephant/">
+                        <span class="tag">elephant</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo-github/">
+                        <span class="tag">hexo github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/pgAdmin4-postgresql/">
+                        <span class="tag">pgAdmin4 postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/postgresql/">
+                        <span class="tag">postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/addPostgis/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/cat.jpg" alt="addPostgis">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T17:05:45.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/addPostgis/" class="has-link-black-ter is-size-6">addPostgis</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/20/addExtension/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time></div>
+                    <a href="/2019/06/20/addExtension/" class="has-link-black-ter is-size-6">How To Add Extensions To PG on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/30/elephant-shed/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time></div>
+                    <a href="/2019/05/30/elephant-shed/" class="has-link-black-ter is-size-6">Elephant Shed</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time></div>
+                    <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="has-link-black-ter is-size-6">installing pgAdmin4 and pg on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/14/hexo-github/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="Hexo Github">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:58:06.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/hexo-github/" class="has-link-black-ter is-size-6">Hexo Github</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/elephant/">
+                        <span class="tag">elephant</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo-github/">
+                        <span class="tag">hexo github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/pgAdmin4-postgresql/">
+                        <span class="tag">pgAdmin4 postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/postgresql/">
+                        <span class="tag">postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/gallery/logocat.png" alt="Elephant Shed" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jacqueline zhang&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

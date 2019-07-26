@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>How To Add Extensions To PG on Ubuntu - Jacqueline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="How Extensibility WorksPostgreSQL is extensible because its operation is catalog-driven. PostgreSQL stores much more information in its catalogs: not only information about tables and columns, but als">
+<meta name="keywords" content="postgresql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How To Add Extensions To PG on Ubuntu">
+<meta property="og:url" content="https://qyqy22.github.io/2019/06/20/addExtension/index.html">
+<meta property="og:site_name" content="Jacqueline">
+<meta property="og:description" content="How Extensibility WorksPostgreSQL is extensible because its operation is catalog-driven. PostgreSQL stores much more information in its catalogs: not only information about tables and columns, but als">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://qyqy22.github.io/gallery/news1.jpg">
+<meta property="og:updated_time" content="2019-07-17T23:12:20.188Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How To Add Extensions To PG on Ubuntu">
+<meta name="twitter:description" content="How Extensibility WorksPostgreSQL is extensible because its operation is catalog-driven. PostgreSQL stores much more information in its catalogs: not only information about tables and columns, but als">
+<meta name="twitter:image" content="https://qyqy22.github.io/gallery/news1.jpg">
+
+
+
+
+
+<link rel="alternative" href="rss2.xml" title="How To Add Extensions To PG on Ubuntu" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/gallery/logocat.png" alt="How To Add Extensions To PG on Ubuntu" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/qyqy22/qyqy22.github.io.git">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Table of Contents" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes read (About 1267 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                How To Add Extensions To PG on Ubuntu
+                <!--add by jac page.author-->
+                <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                    <span class="level-item has-text-grey">
+                        Jacqueline.zhang
+                    </span>
+                </div>
+                <!--add by jac end-->
+            
+        </h1>
+        <div class="content">
+            <h2 id="How-Extensibility-Works"><a href="#How-Extensibility-Works" class="headerlink" title="How Extensibility Works"></a>How Extensibility Works</h2><p>PostgreSQL is extensible because its operation is catalog-driven.</p>
+<p>PostgreSQL stores much more information in its catalogs: not only information about tables and columns, but also information about data types, functions, access methods, and so on. These tables can be modified by the user, and since PostgreSQL bases its operation on these tables, this means that PostgreSQL can be extended by users.</p>
+<p>The PostgreSQL server can moreover incorporate user-written code into itself through dynamic loading.<br><a id="more"></a></p>
+<h3 id="The-3-directory-for-Extension-directory"><a href="#The-3-directory-for-Extension-directory" class="headerlink" title="The 3 directory for Extension directory"></a>The 3 directory for Extension directory</h3><p>The following three directories are used for storing the files related to creating a extension in PG, these are :</p>
+<p>1- /path/to/source/tree/contrib/ - This is top level directory for extension in the PostgreSQL source code.</p>
+<p>2- /path/to/source/tree/build_dir/contrib - If you build original code in build_dir directory, the contrib code will be built in the same build_dir path.<br>If you build original code in the source tree, the contrib code will be built in the source tree dir not in the build_dir directory. The build_dir depends whether you mkdir it.</p>
+<p>3- /path/to/source/tree/psql/share/extension - I install all files under the directory <code>/path/to/source/tree/psql</code> instead of <code>/usr/local/pgsql</code>. So the extension is intall under the path. This is the shared library for the extension is stored.When I install my own extensions, the extension will be stored under /share/extension path.</p>
+<h3 id="There-are-two-kinds-of-ways-to-add-extension"><a href="#There-are-two-kinds-of-ways-to-add-extension" class="headerlink" title="There are two kinds of ways to add extension."></a>There are two kinds of ways to add extension.</h3><p>The PostgreSQL server comes pre-installed with a number of extensions, in order to load these extensions in the database the user needs to run the “create extension” command and provide a name of the extension. The corresponding extension files (mentioned below) are excuted in order to load the extension in the database.</p>
+<p>PostgreSQL also allows the user to create there own extensions and load them in the database. This blog focusses on <code>how you can create your own extensions</code> to PostgreSQL and load them in the database.</p>
+<h2 id="How-to-Use-PostgreSQL-Community-Supported-Extensions"><a href="#How-to-Use-PostgreSQL-Community-Supported-Extensions" class="headerlink" title="How to Use PostgreSQL Community Supported Extensions"></a>How to Use PostgreSQL Community Supported Extensions</h2><p>run the “create extension” command and provide a name of the extension.</p>
+<blockquote>
+<p>CREATE EXTENSION [ IF NOT EXISTS ] extension_name<br>   [ WITH ] [ SCHEMA schema_name ]<br>            [ VERSION version ]<br>            [ FROM old_version ]<br>            [ CASCADE ]</p>
+</blockquote>
+<p>for example I create extension pg_buffercache.</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">postgres=<span class="hljs-comment"># create extension pg_buffercache; </span></span><br><span class="line">postgres=<span class="hljs-comment"># \dx</span></span><br><span class="line">List of installed extensions</span><br><span class="line">Name | Version | Schema | Description</span><br><span class="line"><span class="hljs-comment">--------------------+---------+------------+-------------------------------------------------</span></span><br><span class="line">pg_buffercache | 1.3 | public | examine the shared buffer <span class="hljs-keyword">cache</span></span><br><span class="line">pg_stat_statements | <span class="hljs-number">1.7</span> | <span class="hljs-keyword">public</span> | track execution <span class="hljs-keyword">statistics</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">all</span> <span class="hljs-keyword">SQL</span> statements executed</span><br><span class="line">plpgsql | <span class="hljs-number">1.0</span> | pg_catalog | PL/pgSQL <span class="hljs-keyword">procedural</span> <span class="hljs-keyword">language</span></span><br></pre></td></tr></table></figure>
+<h2 id="Add-a-your-own-extension-on-PG"><a href="#Add-a-your-own-extension-on-PG" class="headerlink" title="Add a your own extension on PG"></a>Add a your own extension on PG</h2><p>To be able to run the create extension command in your database,your extension needs at least two files: a control file and a extension’s SQL script file in the format.<br>The simple plpgsql function allows us to encode any integer into its base36 representation. If we copied these two files into postgres SHAREDIR/extension directory, then we could start using the extension with CREATE EXTENSION. But we won’t bother users with figuring out where to put these files and how to copy them manually – that’s what Makefiles are made for. So, let’s add one to our project.  </p>
+<h3 id="Create-base36-extension-to-pg"><a href="#Create-base36-extension-to-pg" class="headerlink" title="Create base36 extension to pg"></a>Create base36 extension to pg</h3><p>create a base36 folder<br>I add base36 folder under the directory (/path/to/source/tree/build_dir/contrib/)</p>
+<blockquote>
+<p>$ mkdir base36  –you can put anywhere you like.   </p>
+</blockquote>
+<p>add base36–0.0.1.sql, base36. control, Makefile  in the folder</p>
+<h4 id="Control-file"><a href="#Control-file" class="headerlink" title="Control file"></a>Control file</h4><p>base36.control   </p>
+<blockquote>
+<p>comment = ‘base36 datatype’<br>default_version = ‘0.0.1’<br>relocatable = true</p>
+</blockquote>
+<h4 id="SQL-file"><a href="#SQL-file" class="headerlink" title="SQL file"></a>SQL file</h4><p>base36–0.0.1.sql   </p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">-- complain if script is sourced in psql, rather than via CREATE EXTENSION</span></span><br><span class="line">\echo <span class="hljs-keyword">Use</span> <span class="hljs-string">"CREATE EXTENSION base36"</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">load</span> this file. \quit</span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">FUNCTION</span> base36_encode(digits <span class="hljs-built_in">int</span>)</span><br><span class="line"><span class="hljs-keyword">RETURNS</span> <span class="hljs-built_in">text</span></span><br><span class="line"><span class="hljs-keyword">LANGUAGE</span> plpgsql IMMUTABLE <span class="hljs-keyword">STRICT</span></span><br><span class="line">  <span class="hljs-keyword">AS</span> $$</span><br><span class="line">    <span class="hljs-keyword">DECLARE</span></span><br><span class="line">      chars <span class="hljs-built_in">char</span>[];</span><br><span class="line">      ret varchar;</span><br><span class="line">      val int;</span><br><span class="line">    <span class="hljs-keyword">BEGIN</span></span><br><span class="line">      <span class="hljs-keyword">IF</span> digits = <span class="hljs-number">0</span></span><br><span class="line">        <span class="hljs-keyword">THEN</span> <span class="hljs-keyword">RETURN</span>(<span class="hljs-string">'0'</span>);</span><br><span class="line">      <span class="hljs-keyword">END</span> <span class="hljs-keyword">IF</span>;</span><br><span class="line">      chars := ARRAY[</span><br><span class="line">                '0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h',</span><br><span class="line">                'i','j','k','l','m','n','o','p','q','r','s','t', 'u','v','w','x','y','z'</span><br><span class="line">              ];</span><br><span class="line"></span><br><span class="line">      val := digits;</span><br><span class="line">      ret := '';</span><br><span class="line"></span><br><span class="line">    WHILE val != 0 LOOP</span><br><span class="line">      ret := chars[(val % 36)+1] || ret;</span><br><span class="line">      val := val / 36;</span><br><span class="line">    <span class="hljs-keyword">END</span> <span class="hljs-keyword">LOOP</span>;</span><br><span class="line"></span><br><span class="line">    RETURN(ret);</span><br><span class="line">    <span class="hljs-keyword">END</span>;</span><br><span class="line">  $$;</span><br></pre></td></tr></table></figure>
+<p>Most of the environment variables needed to build an extension are setup in pg_config and can simply be reused.</p>
+<blockquote>
+<p>export PGDATA=/home/postgres/postgresql/pg11/psql/data(data directory)<br>export PATH=/home/postgres/postgresql/pg11/psql/bin(postgresql bin directory)</p>
+</blockquote>
+<h4 id="Makefile"><a href="#Makefile" class="headerlink" title="Makefile"></a>Makefile</h4><p>Every PostgreSQL installation from 9.1 onwards provides a build infrastructure for extensions called PGXS, allowing extensions to be easily built against an already-installed server. Most of the environment variables needed to build an extension are setup in pg_config and can simply be reused.</p>
+<p>For our example this Makefile fits our needs.</p>
+<p>Makefile</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">EXTENSION = base36        <span class="hljs-comment"># the extensions name</span></span><br><span class="line">DATA = base36--0.0.1.sql  <span class="hljs-comment"># script files to install</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># postgres build stuff</span></span><br><span class="line">PG_CONFIG = pg_config</span><br><span class="line">PGXS := $(shell $(PG_CONFIG) --pgxs)</span><br><span class="line">include $(PGXS)</span><br></pre></td></tr></table></figure>
+<p>Now we can start using the extension run</p>
+<blockquote>
+<p>$ make install</p>
+</blockquote>
+<p>.sql and .control will be installed to dir $PGDATA/share/extension/<br>You can see the extension was installed in the share/extension path.</p>
+<p><img src="/2019/06/20/addExtension/makeinstalladdexten.png" alt="makeinstalladdexten"></p>
+<h4 id="Regress-test"><a href="#Regress-test" class="headerlink" title="Regress test"></a>Regress test</h4><p>I also add a regress test in Makefile and add regress test SQL as viewed below.</p>
+<p><img src="/2019/06/20/addExtension/regresstest.png" alt="regresstest"></p>
+<p>Add <code>REGRESS = base36_test</code>   in the Makefile as viewed below:    </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">EXTENSION = base36        <span class="hljs-comment"># the extensions name</span></span><br><span class="line">DATA = base36--0.0.1.sql  <span class="hljs-comment"># script files to install</span></span><br><span class="line">REGRESS = base36_test     <span class="hljs-comment"># our test script file (without extension)</span></span><br><span class="line"><span class="hljs-comment"># postgres build stuff</span></span><br><span class="line">PG_CONFIG = pg_config</span><br><span class="line">PGXS := $(shell $(PG_CONFIG) --pgxs)</span><br><span class="line">include $(PGXS)</span><br></pre></td></tr></table></figure>
+<p>add regress test sql<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir sql</span><br><span class="line">$ mkdir result</span><br></pre></td></tr></table></figure></p>
+<p>add sql/base36_test.sql  </p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">CREATE</span> EXTENSION base36;</span><br><span class="line"><span class="hljs-keyword">SELECT</span> base36_encode(<span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-keyword">SELECT</span> base36_encode(<span class="hljs-number">1</span>);</span><br><span class="line"><span class="hljs-keyword">SELECT</span> base36_encode(<span class="hljs-number">36</span>);</span><br><span class="line"><span class="hljs-keyword">SELECT</span> base36_encode(<span class="hljs-number">123456789</span>);</span><br></pre></td></tr></table></figure>
+<p>Regress test begin </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ make installcheck</span><br><span class="line">$ mkdir expected </span><br><span class="line">$ mv results/base36_test.out to expected</span><br><span class="line">$ make installcheck</span><br></pre></td></tr></table></figure>
+<p>regress test result<br><img src="/2019/06/20/addExtension/makeinstallcheck.png" alt="makeinstallcheck"></p>
+<p>create extension base36<br><img src="/2019/06/20/addExtension/createbase36.png" alt="createbase36"></p>
+<h4 id="C-Language-function-to-make-it-work-with-postgres"><a href="#C-Language-function-to-make-it-work-with-postgres" class="headerlink" title="C- Language function to make it work with postgres"></a>C- Language function to make it work with postgres</h4><p>add base36.c and update base36-0.0.1 to base36-0.0.2.sql, and update Makefile and base36.control as viewed below<br><img src="/2019/06/20/addExtension/addc.png" alt="addc"> </p>
+<blockquote>
+<p>drop extension base36;</p>
+</blockquote>
+<p>base36–0.0.2.sql </p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">\echo <span class="hljs-keyword">Use</span> <span class="hljs-string">"CREATE EXTENSION base36"</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">load</span> this file. \quit</span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">FUNCTION</span> base36_encode(<span class="hljs-built_in">integer</span>) <span class="hljs-keyword">RETURNS</span> <span class="hljs-built_in">text</span></span><br><span class="line"><span class="hljs-keyword">AS</span> <span class="hljs-string">'$libdir/base36'</span></span><br><span class="line"><span class="hljs-keyword">LANGUAGE</span> C IMMUTABLE <span class="hljs-keyword">STRICT</span>;  <span class="hljs-comment"># this part for C language</span></span><br></pre></td></tr></table></figure>
+<p>base36.control  </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># base36 extension</span></span><br><span class="line">comment = <span class="hljs-string">'base36 datatype'</span></span><br><span class="line">default_version = <span class="hljs-string">'0.0.2'</span></span><br><span class="line">relocatable = <span class="hljs-literal">true</span></span><br></pre></td></tr></table></figure>
+<p>Makefile   </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">EXTENSION = base36        <span class="hljs-comment"># the extensions name</span></span><br><span class="line">DATA = base36--0.0.1.sql  <span class="hljs-comment"># script files to install</span></span><br><span class="line">REGRESS = base36_test     <span class="hljs-comment"># our test script file (without extension)</span></span><br><span class="line">MODULES = base36          <span class="hljs-comment"># our c module file to build</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># postgres build stuff    </span></span><br><span class="line">PG_CONFIG = pg_config</span><br><span class="line">PGXS := $(shell $(PG_CONFIG) --pgxs)</span><br><span class="line">include $(PGXS)</span><br></pre></td></tr></table></figure>
+<p>base36.c<br><figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"postgres.h"</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"fmgr.h"</span></span></span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"utils/builtins.h"</span></span></span><br><span class="line"></span><br><span class="line">PG_MODULE_MAGIC;</span><br><span class="line"></span><br><span class="line">PG_FUNCTION_INFO_V1(base36_encode);</span><br><span class="line">Datum</span><br><span class="line">base36_encode(PG_FUNCTION_ARGS)</span><br><span class="line">&#123;</span><br><span class="line">    int32 arg = PG_GETARG_INT32(<span class="hljs-number">0</span>);</span><br><span class="line">    <span class="hljs-keyword">if</span> (arg &lt; <span class="hljs-number">0</span>)</span><br><span class="line">        ereport(ERROR,</span><br><span class="line">            (</span><br><span class="line">             errcode(ERRCODE_NUMERIC_VALUE_OUT_OF_RANGE),</span><br><span class="line">             errmsg(<span class="hljs-string">"negative values are not allowed"</span>),</span><br><span class="line">             errdetail(<span class="hljs-string">"value %d is negative"</span>, arg),</span><br><span class="line">             errhint(<span class="hljs-string">"make it positive"</span>)</span><br><span class="line">            )</span><br><span class="line">        );</span><br><span class="line">    <span class="hljs-keyword">char</span> base36[<span class="hljs-number">36</span>] = <span class="hljs-string">"0123456789abcdefghijklmnopqrstuvwxyz"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/* max 6 char + '\0' */</span></span><br><span class="line">    <span class="hljs-keyword">char</span> *buffer = palloc(<span class="hljs-number">7</span> * <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">char</span>));</span><br><span class="line">    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> offset = <span class="hljs-keyword">sizeof</span>(buffer);</span><br><span class="line">    buffer[--offset] = <span class="hljs-string">'\0'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">do</span> &#123;</span><br><span class="line">        buffer[--offset] = base36[arg % <span class="hljs-number">36</span>];</span><br><span class="line">    &#125; <span class="hljs-keyword">while</span> (arg /= <span class="hljs-number">36</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    PG_RETURN_TEXT_P(cstring_to_text(&amp;buffer[offset]));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Then we command again. <code>$ make install &amp; make installcheck</code></p>
+<blockquote>
+<p>create extension base36;</p>
+</blockquote>
+<p>You will see as below<br><img src="/2019/06/20/addExtension/addbase02.png" alt="addbase02"> </p>
+<p>I add function in base36.c</p>
+<pre><code class="c"><span class="keyword">if</span> (arg &lt; <span class="number">0</span>)
+    ereport(ERROR,
+        (
+         errcode(ERRCODE_NUMERIC_VALUE_OUT_OF_RANGE),
+         errmsg(<span class="string">"negative values are not allowed"</span>),
+         errdetail(<span class="string">"value %d is negative"</span>, arg),
+         errhint(<span class="string">"make it positive"</span>)
+        )
+    );
+
+</code></pre>
+<p>result<br><img src="/2019/06/20/addExtension/cfunction.png" alt="cfunction"> </p>
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="https://www.postgresql.org/docs/12/extend.html" target="_blank" rel="noopener">https://www.postgresql.org/docs/12/extend.html</a><br><a href="https://www.postgresql.org/docs/12/contrib.html" target="_blank" rel="noopener">https://www.postgresql.org/docs/12/contrib.html</a><br><a href="http://big-elephants.com/2015-10/writing-postgres-extensions-part-i/" target="_blank" rel="noopener">http://big-elephants.com/2015-10/writing-postgres-extensions-part-i/</a></p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/postgresql/">postgresql</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/06/21/addPostgis/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">addPostgis</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/30/elephant-shed/">
+                <span class="level-item">Elephant Shed</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://qyqy22.github.io/2019/06/20/addExtension/';
+        this.page.identifier = '2019/06/20/addExtension/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'https-highgosoftware-github-io' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/gallery/logocat.png" alt="Jac">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jac
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Shared knowledge
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Vancouver,BC</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/qyqy22/qyqy22.github.io.git" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/qyqy22/qyqy22.github.io.git">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/rss2.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Table of Contents
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#How-Extensibility-Works">
+        <span class="has-mr-6">1</span>
+        <span>How Extensibility Works</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#The-3-directory-for-Extension-directory">
+        <span class="has-mr-6">1.1</span>
+        <span>The 3 directory for Extension directory</span>
+        </a></li><li>
+        <a class="is-flex" href="#There-are-two-kinds-of-ways-to-add-extension">
+        <span class="has-mr-6">1.2</span>
+        <span>There are two kinds of ways to add extension.</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#How-to-Use-PostgreSQL-Community-Supported-Extensions">
+        <span class="has-mr-6">2</span>
+        <span>How to Use PostgreSQL Community Supported Extensions</span>
+        </a></li><li>
+        <a class="is-flex" href="#Add-a-your-own-extension-on-PG">
+        <span class="has-mr-6">3</span>
+        <span>Add a your own extension on PG</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Create-base36-extension-to-pg">
+        <span class="has-mr-6">3.1</span>
+        <span>Create base36 extension to pg</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Control-file">
+        <span class="has-mr-6">3.1.1</span>
+        <span>Control file</span>
+        </a></li><li>
+        <a class="is-flex" href="#SQL-file">
+        <span class="has-mr-6">3.1.2</span>
+        <span>SQL file</span>
+        </a></li><li>
+        <a class="is-flex" href="#Makefile">
+        <span class="has-mr-6">3.1.3</span>
+        <span>Makefile</span>
+        </a></li><li>
+        <a class="is-flex" href="#Regress-test">
+        <span class="has-mr-6">3.1.4</span>
+        <span>Regress test</span>
+        </a></li><li>
+        <a class="is-flex" href="#C-Language-function-to-make-it-work-with-postgres">
+        <span class="has-mr-6">3.1.5</span>
+        <span>C- Language function to make it work with postgres</span>
+        </a></li></ul></li></ul></li><li>
+        <a class="is-flex" href="#reference">
+        <span class="has-mr-6">4</span>
+        <span>reference</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/qyqy22/qyqy22.github.io.git" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/elephant/">
+            <span class="level-start">
+                <span class="level-item">elephant</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/extension/">
+            <span class="level-start">
+                <span class="level-item">extension</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/postgresql/">
+            <span class="level-start">
+                <span class="level-item">postgresql</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/elephant/" style="font-size: 10px;">elephant</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo github</a> <a href="/tags/pgAdmin4-postgresql/" style="font-size: 10px;">pgAdmin4 postgresql</a> <a href="/tags/postgresql/" style="font-size: 10px;">postgresql</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/addPostgis/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/cat.jpg" alt="addPostgis">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T17:05:45.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/addPostgis/" class="has-link-black-ter is-size-6">addPostgis</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/20/addExtension/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time></div>
+                    <a href="/2019/06/20/addExtension/" class="has-link-black-ter is-size-6">How To Add Extensions To PG on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/30/elephant-shed/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time></div>
+                    <a href="/2019/05/30/elephant-shed/" class="has-link-black-ter is-size-6">Elephant Shed</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time></div>
+                    <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="has-link-black-ter is-size-6">installing pgAdmin4 and pg on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/14/hexo-github/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="Hexo Github">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:58:06.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/hexo-github/" class="has-link-black-ter is-size-6">Hexo Github</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/elephant/">
+                        <span class="tag">elephant</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo-github/">
+                        <span class="tag">hexo github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/pgAdmin4-postgresql/">
+                        <span class="tag">pgAdmin4 postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/postgresql/">
+                        <span class="tag">postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/addPostgis/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/cat.jpg" alt="addPostgis">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T17:05:45.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/addPostgis/" class="has-link-black-ter is-size-6">addPostgis</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/20/addExtension/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time></div>
+                    <a href="/2019/06/20/addExtension/" class="has-link-black-ter is-size-6">How To Add Extensions To PG on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/30/elephant-shed/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time></div>
+                    <a href="/2019/05/30/elephant-shed/" class="has-link-black-ter is-size-6">Elephant Shed</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time></div>
+                    <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="has-link-black-ter is-size-6">installing pgAdmin4 and pg on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/14/hexo-github/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="Hexo Github">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:58:06.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/hexo-github/" class="has-link-black-ter is-size-6">Hexo Github</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/elephant/">
+                        <span class="tag">elephant</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo-github/">
+                        <span class="tag">hexo github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/pgAdmin4-postgresql/">
+                        <span class="tag">pgAdmin4 postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/postgresql/">
+                        <span class="tag">postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/gallery/logocat.png" alt="How To Add Extensions To PG on Ubuntu" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jacqueline.zhang&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>installing pgAdmin4 and pg on Ubuntu - Jacqueline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="PgAdmin 4 Installation Steps Update the systemBefore starting the installation process, you have to update the system by executing the following command.   $sudo apt update">
+<meta name="keywords" content="pgAdmin4 postgresql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="installing pgAdmin4 and pg on Ubuntu">
+<meta property="og:url" content="https://qyqy22.github.io/2019/05/16/installing-pgAdmin4-and-pg/index.html">
+<meta property="og:site_name" content="Jacqueline">
+<meta property="og:description" content="PgAdmin 4 Installation Steps Update the systemBefore starting the installation process, you have to update the system by executing the following command.   $sudo apt update">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://qyqy22.github.io/gallery/pgAdmin4-1.png">
+<meta property="og:updated_time" content="2019-06-10T23:15:50.830Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="installing pgAdmin4 and pg on Ubuntu">
+<meta name="twitter:description" content="PgAdmin 4 Installation Steps Update the systemBefore starting the installation process, you have to update the system by executing the following command.   $sudo apt update">
+<meta name="twitter:image" content="https://qyqy22.github.io/gallery/pgAdmin4-1.png">
+
+
+
+
+
+<link rel="alternative" href="rss2.xml" title="installing pgAdmin4 and pg on Ubuntu" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/gallery/logocat.png" alt="installing pgAdmin4 and pg on Ubuntu" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/qyqy22/qyqy22.github.io.git">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+        </span>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 619 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                installing pgAdmin4 and pg on Ubuntu
+                <!--add by jac page.author-->
+                <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                    <span class="level-item has-text-grey">
+                        
+                    </span>
+                </div>
+                <!--add by jac end-->
+            
+        </h1>
+        <div class="content">
+            <h2 id="PgAdmin-4-Installation-Steps"><a href="#PgAdmin-4-Installation-Steps" class="headerlink" title="PgAdmin 4 Installation Steps"></a>PgAdmin 4 Installation Steps</h2><ol>
+<li>Update the system<br>Before starting the installation process, you have to update the system by executing the following command. </li>
+</ol>
+<pre><code class="bash"><span class="variable">$sudo</span> apt update   
+</code></pre>
+<p><img src="/2019/05/16/installing-pgAdmin4-and-pg/pgadmin.png" alt="pgadmin"></p>
+<a id="more"></a>
+<ol start="2">
+<li>Install required packages<br>Three packages require to install before downloading pgAdmin which are python, pip and virtualenv. Run the following command to install these packages.      </li>
+</ol>
+<pre><code class="bash">$ sudo apt install build-essential libssl-dev libffi-dev libgmp3-dev virtualenv 
+</code></pre>
+<p><img src="/2019/05/16/installing-pgAdmin4-and-pg/pgadmin2.png" alt="pgadmin2"> </p>
+<p>When the following prompt appears then press ‘y’ to complete the installation process of the required packages.       </p>
+<p><img src="/2019/05/16/installing-pgAdmin4-and-pg/pgadmin-1.png" alt="pgadmin-1">  </p>
+<ol start="3">
+<li>Create virtual environment<br>Run the following commands to create a new folder named pgAdmin4 in the current location, go to the newly created folder and create the virtual environment.        </li>
+</ol>
+<pre><code class="bash">$ mkdir pgAdmin4
+$ <span class="built_in">cd</span> pgAdmin4
+$ virtualenv pgAdmin4   
+</code></pre>
+<ol start="4">
+<li>Activate virtual environment<br>Go to pgAdmin4 folder under pgAdmin4 and run the following commands to activate the virtual environment.        </li>
+</ol>
+<pre><code class="bash">$ <span class="built_in">cd</span> pgAdmin4      
+$ <span class="built_in">source</span> bin/activate      
+</code></pre>
+<ol start="5">
+<li>Download pgAdmin 4<br>Run the following command to download the latest version of pgAdmin 4.<br>pgadmin4-4.6-py2.py3-none-any.whl      </li>
+</ol>
+<pre><code class="bash">$ wget https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -pgadmin4-4.6-py2.py3-none-any.whl
+</code></pre>
+<p>After completing the download of pgAdmin, the console will be look like the following image.      </p>
+<ol start="6">
+<li>Install pgAdmin 4<br>Run the following command to complete the installation process of pgAdmin 4.   </li>
+</ol>
+<pre><code class="bash">$ pip install pgadmin4-4.6-py2.py3-none-any.whl      
+</code></pre>
+<ol start="7">
+<li>Configure and run pgAdmin 4<br>After completing the installation steps, you have to create a configuration file to run this software. Create a new file named config_local.py in lib/python2.7/site-packages/pgadmin4/ folder using nano editor.   </li>
+</ol>
+<pre><code class="bash">$ nano lib/python2.7/site-packages/pgadmin4/config_local.py
+Add the following content <span class="keyword">in</span> config_local.py.
+
+import os
+DATA_DIR = os.path.realpath(os.path.expanduser(u<span class="string">'~/.pgadmin/'</span>))
+LOG_FILE = os.path.join(DATA_DIR, <span class="string">'pgadmin4.log'</span>)
+SQLITE_PATH = os.path.join(DATA_DIR, <span class="string">'pgadmin4.db'</span>)
+SESSION_DB_PATH = os.path.join(DATA_DIR, <span class="string">'sessions'</span>)
+STORAGE_DIR = os.path.join(DATA_DIR, <span class="string">'storage'</span>)
+SERVER_MODE = False
+</code></pre>
+<p>Now, use the following command to run pgAdmin.         </p>
+<pre><code class="bash">$ python lib/python2.7/site-packages/pgadmin4/pgAdmin4.py
+</code></pre>
+<p>***Note: If any flask-htmlmin module error appears then run the following commands to install the module and then run the server.  </p>
+<pre><code class="bash">$ pip install flask-htmlmin
+$ python lib/python2.7/site-packages/pgadmin4/pgAdmin4.py
+</code></pre>
+<p>The following message will appear if pgAdmin can run successfully.    </p>
+<h2 id="Using-pgAdmin-4"><a href="#Using-pgAdmin-4" class="headerlink" title="Using pgAdmin 4"></a>Using pgAdmin 4</h2><p>Before using pgAdmin, you need to confirm that the latest version of PostgreSQL is installed on your operating system. Run the following command to install postgres package for PostgreSQL and contrib package for taking additional functionalities related to PostgreSQL.        </p>
+<pre><code class="bash">$ sudo apt install postgresql postgresql-contrib  
+</code></pre>
+<p>Next, you have to create the username and password for PostgreSQL database. Type the following command in the terminal to add login credentials for the user, postgres.   </p>
+<pre><code class="bash">$ sudo -u postgres psql postgres   
+</code></pre>
+<p>Setup the password for the username, ‘postgres’. It will ask to type the password two times for confirmation.<br> \password postgres<br> If you want to quit from the interactive session of postgres then type ‘\q’.<br> PostgreSQL is now ready to use. Go to the pgAdmin browser and click on the ‘Add New Server’ option.     </p>
+<h2 id="Running-easier-pgAdmin4"><a href="#Running-easier-pgAdmin4" class="headerlink" title="Running easier pgAdmin4"></a>Running easier pgAdmin4</h2><p>Steps to execute a shell script in Linux      </p>
+<p>The procedure is as follows:       </p>
+<ol>
+<li>Create a new file called demo.sh using a text editor such as nano or vi in Linux:<br>   nano demo.sh</li>
+<li>Add the following code:</li>
+</ol>
+<pre><code class="bash"><span class="meta">#!/bin/bash</span>
+<span class="built_in">cd</span> ~/pgadmin4
+<span class="built_in">source</span> bin/activate
+python lib/python2.7/site-packages/pgadmin4/pgAdmin4.py
+</code></pre>
+<ol start="3">
+<li>Set the script executable permission by running chmod command in Linux:<br>chmod +x demo.sh       </li>
+<li>Execute a shell script in Linux:<br>./demo.sh       </li>
+</ol>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/pgAdmin4-postgresql/">pgAdmin4 postgresql</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/05/30/elephant-shed/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Elephant Shed</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/05/14/hexo-github/">
+                <span class="level-item">Hexo Github</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://qyqy22.github.io/2019/05/16/installing-pgAdmin4-and-pg/';
+        this.page.identifier = '2019/05/16/installing-pgAdmin4-and-pg/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'https-highgosoftware-github-io' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/gallery/logocat.png" alt="Jac">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Jac
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Shared knowledge
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Vancouver,BC</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/qyqy22/qyqy22.github.io.git" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="https://github.com/qyqy22/qyqy22.github.io.git">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/rss2.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/qyqy22/qyqy22.github.io.git" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">PPOffice</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">github.com</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/elephant/">
+            <span class="level-start">
+                <span class="level-item">elephant</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/extension/">
+            <span class="level-start">
+                <span class="level-item">extension</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/hexo/">
+            <span class="level-start">
+                <span class="level-item">hexo</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/postgresql/">
+            <span class="level-start">
+                <span class="level-item">postgresql</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/elephant/" style="font-size: 10px;">elephant</a> <a href="/tags/hexo-github/" style="font-size: 10px;">hexo github</a> <a href="/tags/pgAdmin4-postgresql/" style="font-size: 10px;">pgAdmin4 postgresql</a> <a href="/tags/postgresql/" style="font-size: 10px;">postgresql</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/addPostgis/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/cat.jpg" alt="addPostgis">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T17:05:45.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/addPostgis/" class="has-link-black-ter is-size-6">addPostgis</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/20/addExtension/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time></div>
+                    <a href="/2019/06/20/addExtension/" class="has-link-black-ter is-size-6">How To Add Extensions To PG on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/30/elephant-shed/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time></div>
+                    <a href="/2019/05/30/elephant-shed/" class="has-link-black-ter is-size-6">Elephant Shed</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time></div>
+                    <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="has-link-black-ter is-size-6">installing pgAdmin4 and pg on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/14/hexo-github/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="Hexo Github">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:58:06.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/hexo-github/" class="has-link-black-ter is-size-6">Hexo Github</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/elephant/">
+                        <span class="tag">elephant</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo-github/">
+                        <span class="tag">hexo github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/pgAdmin4-postgresql/">
+                        <span class="tag">pgAdmin4 postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/postgresql/">
+                        <span class="tag">postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/06/21/addPostgis/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/cat.jpg" alt="addPostgis">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-21T17:05:45.000Z">2019-06-21</time></div>
+                    <a href="/2019/06/21/addPostgis/" class="has-link-black-ter is-size-6">addPostgis</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/06/20/addExtension/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="How To Add Extensions To PG on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-06-20T17:32:00.000Z">2019-06-20</time></div>
+                    <a href="/2019/06/20/addExtension/" class="has-link-black-ter is-size-6">How To Add Extensions To PG on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/extension/">extension</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/30/elephant-shed/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/Elephant_Shed.png" alt="Elephant Shed">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-30T23:43:08.000Z">2019-05-30</time></div>
+                    <a href="/2019/05/30/elephant-shed/" class="has-link-black-ter is-size-6">Elephant Shed</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/elephant/">elephant</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/pgAdmin4-1.png" alt="installing pgAdmin4 and pg on Ubuntu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-16T21:30:05.000Z">2019-05-16</time></div>
+                    <a href="/2019/05/16/installing-pgAdmin4-and-pg/" class="has-link-black-ter is-size-6">installing pgAdmin4 and pg on Ubuntu</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/postgresql/">postgresql</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/05/14/hexo-github/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/gallery/news1.jpg" alt="Hexo Github">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-05-14T16:58:06.000Z">2019-05-14</time></div>
+                    <a href="/2019/05/14/hexo-github/" class="has-link-black-ter is-size-6">Hexo Github</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/elephant/">
+                        <span class="tag">elephant</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/hexo-github/">
+                        <span class="tag">hexo github</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/pgAdmin4-postgresql/">
+                        <span class="tag">pgAdmin4 postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/postgresql/">
+                        <span class="tag">postgresql</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/gallery/logocat.png" alt="installing pgAdmin4 and pg on Ubuntu" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jacqueline zhang&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
